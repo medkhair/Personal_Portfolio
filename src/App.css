@@ -1,0 +1,117 @@
+
+/*
+ * Copyright © 2025 Medkhair.
+ * This software and its source code are owned by Medkhair.
+ * Unauthorized copying, modification, distribution, or use
+ * of this code, via any medium, is strictly prohibited.
+ */
+
+
+/***** General CSS *****/
+
+    @import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+
+    @font-face {
+        font-family: "Clash Display Variable";
+        src: url("https://db.onlinewebfonts.com/t/2fcd723a1a012506da3928146b19364d.eot");
+        src: url("https://db.onlinewebfonts.com/t/2fcd723a1a012506da3928146b19364d.eot?#iefix")format("embedded-opentype"),
+        url("https://db.onlinewebfonts.com/t/2fcd723a1a012506da3928146b19364d.woff2")format("woff2"),
+        url("https://db.onlinewebfonts.com/t/2fcd723a1a012506da3928146b19364d.woff")format("woff"),
+        url("https://db.onlinewebfonts.com/t/2fcd723a1a012506da3928146b19364d.ttf")format("truetype"),
+        url("https://db.onlinewebfonts.com/t/2fcd723a1a012506da3928146b19364d.svg#Clash Display Variable")format("svg");
+    }
+    :root {
+        --Medkhair-color-primary: #0A192F;
+        --Medkhair-color-secondary: #64FFDA;
+        --Medkhair-color-tercairy: #0B1E34;
+        --Medkhair-color-quaternary: #fff;
+    }
+    
+
+    body {
+        margin: 0;
+        font-family: "Sora", sans-serif;
+        background-color: var(--Medkhair-color-primary);
+        color: #fff;
+        line-height: 1.1;
+    }
+
+    .inner {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .inner > * {
+        flex: 1;
+    }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-family: "Clash Display Variable", sans-serif;
+        font-weight: 700;
+    }
+
+    @media (max-width: 768px) {
+        .inner {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .inner > * {
+            margin-bottom: 20px;
+        }
+    }
+
+/***** End of General CSS *****/
+
+
+/***** Hero Section *****/
+
+    #hero {
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .hero h1 {
+        font-size: 60px;
+        margin: 0;
+        color: var(--Medkhair-color-secondary);
+        filter: drop-shadow(0px 4px 25px rgba(100, 255, 218, 0.5));
+        animation : shadowPulse 4s infinite;
+    }
+
+    @keyframes shadowPulse {
+        0% {
+            filter: drop-shadow(0px 4px 25px rgba(100, 255, 218, 0.5));
+        }
+        50% {
+            filter: drop-shadow(0px 6px 35px rgba(100, 255, 218, 0.8));
+        }
+        100% {
+            filter: drop-shadow(0px 4px 25px rgba(100, 255, 218, 0.5));
+        }
+    }
+
+
+    .hero h3 {
+        font-size: 28px;
+        margin-top: 10px;
+        font-family: "Sora", sans-serif;
+    }
+
+    .hero img {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+        margin: auto;
+    }
+    .hero > div:nth-child(2) {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }

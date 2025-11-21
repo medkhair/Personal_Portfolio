@@ -242,16 +242,22 @@
     }
 
     export class Colors{
-        constructor(primary, secondary, background, text){
+        constructor(primary, secondary, tercairy, quaternary){
             this.primary = primary;   
             this.secondary = secondary;
-            this.background = background;
-            this.text = text;
+            this.tercairy = tercairy;
+            this.quaternary = quaternary;
         }
     }
     export class Fonts{
         constructor(primary, secondary){
             this.primary = primary;   
             this.secondary = secondary;
+        }
+    }
+    export class Font{
+        constructor(name, url){
+            this.name = name;   
+            this.url = url;
         }
     }
