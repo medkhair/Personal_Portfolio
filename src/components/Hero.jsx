@@ -13,6 +13,8 @@ function Hero({person}){
         ],
         loop: true,
         delaySpeed: 5000,
+        typeSpeed: 100,
+        deleteSpeed: 50,
     });
 
     return (
@@ -21,7 +23,7 @@ function Hero({person}){
             <section id="hero" className="main">
                 <Inner className="hero">
                     <div>
-                        <h1>{text} <span><Cursor /></span></h1>
+                        <h1>{text} <span><Cursor/></span></h1>
                         <h3>{person.title}</h3>
                         <p>{person.description}</p>
                         <div className="buttons">
