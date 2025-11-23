@@ -26,7 +26,10 @@
         --Medkhair-color-tercairy: #0B1E34;
         --Medkhair-color-quaternary: #fff;
     }
-    
+    html{
+        scroll-behavior: smooth;
+        overflow-x: hidden;
+    }
 
     body {
         margin: 0;
@@ -52,6 +55,41 @@
     h1, h2, h3, h4, h5, h6 {
         font-family: "Clash Display Variable", sans-serif;
         font-weight: 700;
+    }
+    a{
+        color: inherit;
+        text-decoration: none;
+    }
+
+    .button {
+        color: var(--Medkhair-color-primary);
+        border: none;
+        padding: 10px 20px;
+        font-size: 18px;
+        cursor: pointer;
+        border-radius: 10px;
+        transition: background-color 0.4s ease;
+        font-weight: 600;
+    }
+    .button.primary{
+        background-color: var(--Medkhair-color-secondary);
+        color: var(--Medkhair-color-primary);
+        border: 2px solid var(--Medkhair-color-secondary);
+    }
+    .button.secondary{
+        background-color: transparent;
+        color: var(--Medkhair-color-secondary);
+        border: 2px solid var(--Medkhair-color-secondary);
+    }
+    .button.primary:hover {
+        background-color: var(--Medkhair-color-primary);
+        color: var(--Medkhair-color-secondary);
+        border: 2px solid var(--Medkhair-color-secondary);
+    }
+    .button.secondary:hover {
+        background-color: var(--Medkhair-color-secondary);
+        color: var(--Medkhair-color-primary);
+        border: 2px solid var(--Medkhair-color-secondary);
     }
 
     @media (max-width: 768px) {
@@ -99,7 +137,7 @@
 
 
     .hero h3 {
-        font-size: 28px;
+        font-size: 24px;
         margin-top: 10px;
         font-family: "Sora", sans-serif;
     }
@@ -107,11 +145,166 @@
     .hero img {
         width: 100%;
         height: auto;
-        max-width: 350px;
+        max-width: 450px;
         margin: auto;
     }
     .hero > div:nth-child(2) {
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+    .hero p{
+        margin-top: 20px;
+        font-size: 20px;
+        font-weight: 300;
+        line-height: 1.3em;
+    }
+    .hero .buttons {
+        margin-top: 30px;
+        display: flex;
+        gap: 10px;
+    }
+
+    .hero > div:nth-child(2){
+        position: relative;
+        z-index: 2;
+    }
+    .hero > div:nth-child(2) > div{
+        position: relative;
+        z-index: 2;
+    }
+    .hero > div:nth-child(2) img{
+        position: relative;
+        z-index: 3;
+    }
+    .hero > div:nth-child(2)::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--Medkhair-color-secondary);
+        border-radius: 50%;
+        animation: ripple 6s infinite ease-out;
+        opacity: 0.8;
+    }
+    .hero > div:nth-child(2)::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--Medkhair-color-secondary);
+        border-radius: 50%;
+        animation: ripple 4s infinite ease-out;
+        opacity: 0.8;
+    }
+    .hero > div:nth-child(2) > div::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--Medkhair-color-secondary);
+        border-radius: 50%;
+        animation: ripple 4s infinite ease-out;
+        opacity: 0.8;
+    }
+    .hero > div:nth-child(2) > div::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        width: 80%;
+        aspect-ratio: 1 / 1;
+        transform: translate(-50%, -50%);
+        border: 3px solid var(--Medkhair-color-secondary);
+        border-radius: 50%;
+        animation: ripple 3s infinite ease-out;
+        opacity: 0.8;
+    }
+    @keyframes ripple {
+        0% {
+            width: 80%;
+            opacity: 0.8;
+        }
+        70% {
+            width: 90%;
+            opacity: 0.1;
+        }
+        100% {
+            width: 100%;
+            opacity: 0;
+        }
+    }
+    @media (max-width: 768px) {
+        #hero {
+            height: auto;
+            padding: 30px 0;
+        }
+        .hero h1 {
+            font-size: 40px;
+        }
+
+        .hero h3 {
+            font-size: 20px;
+            margin: 10px auto;
+        }
+
+        .hero p {
+            font-size: 18px;
+            margin: 10px auto 0 auto;
+        }
+
+        .hero .buttons {
+            margin-top: 10px;
+            flex-direction: column;
+            align-items: center;
+        }
+        .hero > * {
+            margin-bottom: 0px;
+        }
+        .hero > div:nth-child(2)::before,
+        .hero > div:nth-child(2)::after,
+        .hero > div:nth-child(2) > div::before,
+        .hero > div:nth-child(2) > div::after {
+            width: unset;
+            height: 80%;
+            top: unset;
+            bottom: 0;
+            transform: translateX(-50%);
+            
+        }
+        .hero > div:nth-child(2)::before{
+            animation: ripple2 5s infinite ease-out;
+        }
+        .hero > div:nth-child(2)::after{
+            animation: ripple2 4s infinite ease-out;
+        }
+        .hero > div:nth-child(2) > div::before{
+            animation: ripple2 3s infinite ease-out;
+        }
+        .hero > div:nth-child(2) > div::after{
+            animation: ripple2 2s infinite ease-out;
+        }
+        @keyframes ripple2 {
+            0% {
+                height: 80%;
+                opacity: 0.8;
+            }
+            70% {
+                height: 90%;
+                opacity: 0.1;
+            }
+            100% {
+                height: 100%;
+                opacity: 0;
+            }
+        }
     }
