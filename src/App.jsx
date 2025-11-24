@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Hero from './components/Hero'
 import { person } from './services/data'
+import About from './components/About'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -19,6 +20,7 @@ function App() {
   return (
     <>
       <Hero person={person} />
+      <About person={person} />
     </>
   )
 }

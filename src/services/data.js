@@ -1,5 +1,5 @@
 
-import { Person, Font, Colors, Fonts, Branding } from "./models";
+import { Person, Font, Colors, Fonts, Branding, About } from "./models";
 
 
 
@@ -12,7 +12,13 @@ export const person = new Person(
     null,
     "I create beautiful, responsive, and user-friendly web applications using cutting-edge technologies. Passionate about turning ideas into reality through clean and efficient code.",
     ['../images/heroImage5.png'],
-    null,
+    new About(
+        "About Me",
+        "I am a passionate Full Stack Web Developer with a knack for creating dynamic and responsive web applications. With a strong foundation in both front-end and back-end technologies, I thrive on turning complex problems into elegant solutions. My journey in web development has equipped me with the skills to build seamless user experiences while ensuring robust functionality. I am constantly exploring new technologies and best practices to stay ahead in this ever-evolving field. Let's connect and bring your ideas to life through innovative web solutions.",
+        3,
+        20,
+        4
+    ),
     null,
     null,
     null,

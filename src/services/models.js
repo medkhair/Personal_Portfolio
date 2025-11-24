@@ -26,11 +26,12 @@
 /*********** About *************/
 
     export class About {
-        constructor(title, description, numberOfYearsExperience, numberOfCompletedProjects) {
+        constructor(title, description, numberOfYearsExperience, numberOfCompletedProjects, numberOfHappyClients) {
             this.title = title;
             this.description = description;
             this.numberOfYearsExperience = numberOfYearsExperience;
             this.numberOfCompletedProjects = numberOfCompletedProjects;
+            this.numberOfHappyClients = numberOfHappyClients;
         }
     }
 
