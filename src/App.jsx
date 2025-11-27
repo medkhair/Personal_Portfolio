@@ -5,6 +5,7 @@ import './App.css'
 import Hero from './components/Hero'
 import { person } from './services/data'
 import About from './components/About'
+import Services from './components/Services'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -21,6 +22,7 @@ function App() {
     <>
       <Hero person={person} />
       <About person={person} />
+      <Services person={person} />
     </>
   )
 }

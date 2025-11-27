@@ -23,7 +23,7 @@ function About({person}) {
                     <div>
                         <p>Hello! I'm Mohammed-Khair, a passionate full-stack web developer based in Morocco. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. <br /><br />
 
-My interest in web development started back in 2019 when I decided to explore the world of programming. Fast forward to today, and I've had the privilege of working on various projects ranging from e-commerce platforms to educational management systems.
+My interest in web development started back in 2023 when I decided to explore the world of programming. Fast forward to today, and I've had the privilege of working on various projects ranging from e-commerce platforms to educational management systems.
                         </p>
                         <div className="about-stats">
                             <div className="stat">

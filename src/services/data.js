@@ -1,5 +1,5 @@
 
-import { Person, Font, Colors, Fonts, Branding, About } from "./models";
+import { Person, Font, Colors, Fonts, Branding, About, Service } from "./models";
 
 
 
@@ -19,7 +19,23 @@ export const person = new Person(
         20,
         4
     ),
-    null,
+    [
+        new Service(
+            "Full Stack Web Apps",
+            "Building complete web applications from front-end to back-end using modern frameworks and technologies.",
+            "layers.png"
+        ),
+        new Service(
+            "Landing Pages",
+            "Designing and developing high-converting landing pages tailored to your business needs.",
+            "dashboard.png"
+        ),
+        new Service(
+            "Sale Funnels",
+            "Creating effective sales funnels to guide your customers through the buying process.",
+            "funnel.png"
+        )
+    ],
     null,
     null,
     null,
