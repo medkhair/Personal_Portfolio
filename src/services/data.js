@@ -1,5 +1,65 @@
 
-import { Person, Font, Colors, Fonts, Branding, About, Service } from "./models";
+import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, Skill } from "./models";
+
+
+
+
+export const fonts = [
+    new Font("Roboto", "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"),
+    new Font("Open Sans", "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap")
+];
+
+export const colors = new Colors("#0A192F", "#64FFDA", "#0B1E34", "#FFF");
+
+export const font = new Fonts(fonts[0], fonts[1]);
+
+export const branding = new Branding(
+    colors,
+    font
+);
+
+const skillCategories = [
+    new SkillCategory("Languages"),
+    new SkillCategory("Frameworks & Libraries"),
+    new SkillCategory("Databases & ORMs"),
+    new SkillCategory("CMS"),
+    new SkillCategory("Tools & Platforms")
+];
+
+const skills = [
+    new Skill("HTML", 90, "html.png", skillCategories[0]),
+    new Skill("CSS", 85, "css.png", skillCategories[0]),
+    new Skill("JavaScript", 80, "javascript.png", skillCategories[0]),
+    new Skill("React", 75, "react.png", skillCategories[2]),
+    new Skill("java", 80, "java.png", skillCategories[1]),
+    new Skill("PHP", 70, "php.png", skillCategories[1]),
+    new Skill("Bootstrap", 100, "bootstrap.png", skillCategories[2]),
+    new Skill("Spring boot", 85, "springboot.png", skillCategories[2]),
+    new Skill("Git", 90, "git.png", skillCategories[3]),
+    new Skill("Spring Framework", 80, "spring.png", skillCategories[2]),
+    new Skill("MySQL", 75, "mysql.png", skillCategories[1]),
+    new Skill("Spring Data JPA", 70, "jpa.png", skillCategories[2]),
+    new Skill("Maven", 85, "maven.png", skillCategories[3]),
+    new Skill("RESTful APIs", 80, "api.png", skillCategories[1]),
+    new Skill("Spring Security", 65, "security.png", skillCategories[2]),
+    new Skill("Hibernate", 70, "hibernate.png", skillCategories[2]),
+    new Skill("JQuery", 90, "jquery.png", skillCategories[1]),
+    new Skill("WordPress", 75, "wordpress.png", skillCategories[3]),
+    new Skill("GoHighLevel", 80, "gohighlevel.png", skillCategories[3]),
+    new Skill("ClickFunnels", 70, "clickfunnels.png", skillCategories[3]),
+    new Skill("Figma", 85, "figma.png", skillCategories[4]),
+    new Skill("Visual Studio Code", 95, "vscode.png", skillCategories[4]),
+    new Skill("Postman", 80, "postman.png", skillCategories[4]),
+    new Skill("JavaScript ES6+", 85, "es6.png", skillCategories[0]),
+    new Skill("Python", 60, "python.png", skillCategories[0]),
+    new Skill("SQL", 75, "sql.png", skillCategories[1]),
+    new Skill("PostgreSQL", 70, "postgresql.png", skillCategories[1]),
+    new Skill("C", 65, "c.png", skillCategories[0]),
+    new Skill("ClickUp", 80, "clickup.png", skillCategories[4]),
+    new Skill("Slack", 90, "slack.png", skillCategories[4]),
+    new Skill("System.io", 75, "systemio.png", skillCategories[3])
+
+];
 
 
 
@@ -36,7 +96,7 @@ export const person = new Person(
             "funnel.png"
         )
     ],
-    null,
+    skills,
     null,
     null,
     null,
@@ -44,18 +104,4 @@ export const person = new Person(
     null,
     null,
     null
-);
-
-export const fonts = [
-    new Font("Roboto", "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"),
-    new Font("Open Sans", "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap")
-];
-
-export const colors = new Colors("#0A192F", "#64FFDA", "#0B1E34", "#FFF");
-
-export const font = new Fonts(fonts[0], fonts[1]);
-
-export const branding = new Branding(
-    colors,
-    font
 );

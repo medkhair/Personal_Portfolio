@@ -6,6 +6,7 @@ import Hero from './components/Hero'
 import { person } from './services/data'
 import About from './components/About'
 import Services from './components/Services'
+import Skills from './components/Skills'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -23,6 +24,7 @@ function App() {
       <Hero person={person} />
       <About person={person} />
       <Services person={person} />
+      <Skills person={person} />
     </>
   )
 }

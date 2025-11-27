@@ -62,9 +62,8 @@
     }
 
     export class SkillCategory {
-        constructor(name, skills) {
+        constructor(name) {
             this.name = name;
-            this.skills = skills;
         }
     }
 
