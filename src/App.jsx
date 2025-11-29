@@ -7,6 +7,7 @@ import { person } from './services/data'
 import About from './components/About'
 import Services from './components/Services'
 import Skills from './components/Skills'
+import Education from './components/Education'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -25,6 +26,7 @@ function App() {
       <About person={person} />
       <Services person={person} />
       <Skills person={person} />
+      <Education person={person} />
     </>
   )
 }

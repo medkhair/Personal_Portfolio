@@ -1,5 +1,5 @@
 
-import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, Skill } from "./models";
+import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, Skill, Education, Career } from "./models";
 
 
 
@@ -17,6 +17,7 @@ export const branding = new Branding(
     colors,
     font
 );
+
 
 const skillCategories = [
     new SkillCategory("Languages"),
@@ -61,6 +62,14 @@ const skills = [
 
 ];
 
+const educationPath = [ new Education("Cadi Ayyad University", "Math & Computer Science", 2019, 2022),
+    new Education("Udemy", "Complete Web Development Course", 2023, 2024), 
+    new Education("SAGIM School", "Technician in IT Development", 2023, 2025)
+ ];
+
+const careerPath = [
+    new Career("Company A", "Junior Developer", 2019, 2020, "Worked on front-end development using HTML, CSS, and JavaScript.")
+];
 
 
 export const person = new Person(
@@ -98,7 +107,7 @@ export const person = new Person(
     ],
     skills,
     null,
-    null,
+    educationPath,
     null,
     null,
     null,

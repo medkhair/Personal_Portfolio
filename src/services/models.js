@@ -163,19 +163,17 @@
     }
 
     export class Education{
-        constructor(schoolName, degree, fieldOfStudy, startDate, endDate, grade, description){
+        constructor(schoolName, degree, startDate, endDate){
             this.schoolName = schoolName;
-            this.degree = degree;   
-            this.fieldOfStudy = fieldOfStudy;
+            this.degree = degree;
             this.startDate = startDate;
             this.endDate = endDate;
-            this.grade = grade;
-            this.description = description;
         }   
     }
 
 
 /*********** Career *************/
+
     export class CareerSection{
         constructor(title, careers){
             this.title = title;
