@@ -68,7 +68,7 @@ const educationPath = [ new Education("Cadi Ayyad University", "Math & Computer 
  ];
 
 const careerPath = [
-    new Career("Company A", "Junior Developer", 2019, 2020, "Worked on front-end development using HTML, CSS, and JavaScript.")
+    new Career("Company A", "Junior Developer", "DigitalSpeak_Logo.png", )
 ];
 
 

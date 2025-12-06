@@ -576,7 +576,7 @@
 
     #skills {
         padding: 0px 20px 40px;
-        background-image: var(--Medkhair-color-primary);
+        background: var(--Medkhair-color-primary);
     }
 
     .skills-container {
@@ -739,3 +739,161 @@
 
    
 /***** End of Section 7 (Career) *****/
+
+/***** Section 8 (contact) *****/
+
+    #contact {
+        padding: 80px 0;
+        background: var(--Medkhair-color-primary);
+    }
+
+    .contact-details {
+        display: block;
+        max-width: 900px;
+        margin: 50px auto 0;
+        padding: 0 20px;
+    }
+
+    .contact-form {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        background: rgba(255, 255, 255, 0.03);
+        border: 1px solid rgba(100, 255, 218, 0.15);
+        border-radius: 20px;
+        padding: 50px;
+        backdrop-filter: blur(10px);
+    }
+
+    .form-group {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .form-group label {
+        font-size: 15px;
+        font-weight: 600;
+        color: var(--Medkhair-color-secondary);
+        letter-spacing: 0.5px;
+        margin-bottom: 5px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 16px 20px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 2px solid rgba(100, 255, 218, 0.2);
+        border-radius: 12px;
+        color: #fff;
+        font-size: 15px;
+        font-family: "Sora", sans-serif;
+        transition: all 0.3s ease;
+        outline: none;
+        box-sizing: border-box;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #64748B;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: var(--Medkhair-color-secondary);
+        background: rgba(255, 255, 255, 0.08);
+        box-shadow: 0 0 0 4px rgba(100, 255, 218, 0.1);
+    }
+
+    .form-group select {
+        cursor: pointer;
+        appearance: none;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%2364FFDA' d='M6 9L1 4h10z'/%3E%3C/svg%3E");
+        background-repeat: no-repeat;
+        background-position: right 20px center;
+        padding-right: 50px;
+        background-color: rgba(255, 255, 255, 0.05);
+    }
+
+    .form-group select option {
+        background: var(--Medkhair-color-primary);
+        color: #fff;
+        padding: 10px;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        min-height: 150px;
+        font-family: "Sora", sans-serif;
+        line-height: 1.6;
+    }
+
+    .form-group.message {
+        grid-column: 1 / -1;
+    }
+
+    .submit-btn {
+        grid-column: 1 / -1;
+        width: 100%;
+        max-width: 300px;
+        margin: 20px auto 0;
+        padding: 16px 40px;
+        font-size: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        cursor: pointer;
+    }
+
+    .submit-btn span {
+        transition: transform 0.3s ease;
+        font-size: 20px;
+    }
+
+    .submit-btn:hover span {
+        transform: translateX(5px);
+    }
+
+    @media (max-width: 768px) {
+        #contact {
+            padding: 60px 20px;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+        }
+
+        .contact-form {
+            grid-template-columns: 1fr;
+            gap: 25px;
+            padding: 35px 25px;
+        }
+
+        .form-group label {
+            font-size: 14px;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            padding: 14px 16px;
+            font-size: 14px;
+        }
+
+        .form-group textarea {
+            min-height: 120px;
+        }
+
+        .submit-btn {
+            max-width: 100%;
+            padding: 14px 30px;
+            font-size: 15px;
+            margin-top: 10px;
+        }
+    }
+
+/*** End of Section 8 (contact) *****/
