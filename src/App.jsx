@@ -9,6 +9,7 @@ import Services from './components/Services'
 import Skills from './components/Skills'
 import Education from './components/Education'
 import Contact from './components/Contact'
+import Footer from './components/Footer'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -29,6 +30,7 @@ function App() {
       <Skills person={person} />
       <Education person={person} />
       <Contact person={person} />
+      <Footer />
     </>
   )
 }

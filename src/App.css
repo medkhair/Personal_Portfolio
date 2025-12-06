@@ -897,3 +897,18 @@
     }
 
 /*** End of Section 8 (contact) *****/
+
+
+/***** Footer *****/
+
+    footer {
+        background: rgba(0, 0, 0, .4);
+        padding: 20px 0;
+        text-align: center;
+    }
+
+
+/***** End of Footer *****/
+
+
+/* end of App.css */
