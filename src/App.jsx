@@ -10,6 +10,7 @@ import Skills from './components/Skills'
 import Education from './components/Education'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import Career from './components/Career'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -29,6 +30,7 @@ function App() {
       <Services person={person} />
       <Skills person={person} />
       <Education person={person} />
+      <Career person={person} />
       <Contact person={person} />
       <Footer />
     </>

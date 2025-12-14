@@ -2,8 +2,6 @@
 import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, Skill, Education, Career } from "./models";
 
 
-
-
 export const fonts = [
     new Font("Roboto", "https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"),
     new Font("Open Sans", "https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap")
@@ -68,7 +66,46 @@ const educationPath = [ new Education("Cadi Ayyad University", "Math & Computer 
  ];
 
 const careerPath = [
-    new Career("Company A", "Junior Developer", "DigitalSpeak_Logo.png", )
+    new Career(
+        "Digital Speak", 
+        "Web Developer",
+        "DigitalSpeak_Logo.png",
+        "DigitalSpeak_Bg.jpg",
+        new Date(2024, 11, 10), 
+        null,
+        [
+            "Create Landing pages and sales funnels using different CMS with implementation of css and JavaScript customizations to integrate impressive designs.",
+            "Integrate APIs to enhance functionality and user experience.",
+            "Create full-stack web applications.",
+            "Participated in code reviews and contributed to team meetings."
+        ]
+    ),
+    new Career(
+        "Digital Speak", 
+        "Intern web Developer",
+        "DigitalSpeak_Logo.png",
+        "DigitalSpeak_Bg.jpg",
+        new Date(2024, 12, 10), 
+        new Date(2025, 5, 9), 
+        [
+            "Create Landing pages and sales funnels using different CMS with implementation of css and JavaScript customizations to integrate impressive designs.",
+            "Integrate APIs to enhance functionality and user experience.",
+            "Participated in code reviews and contributed to team meetings."
+        ]
+    ),
+    new Career(
+        "Oriental Group", 
+        "Intern web Developer", 
+        "Oriental_logo.png", 
+        "Marrakech-Morocco-Medina.jpg", 
+        new Date(2024,8, 1), 
+        new Date(2024, 9, 19), 
+        [
+            "Create and maintain WordPress websites for selling argan oil.",
+            "Create a web application in PHP (Arganisme) to manage clients and orders.",
+            "Participated in code reviews and contributed to team meetings."
+        ]
+    ),
 ];
 
 
@@ -108,7 +145,7 @@ export const person = new Person(
     skills,
     null,
     educationPath,
-    null,
+    careerPath,
     null,
     null,
     null,

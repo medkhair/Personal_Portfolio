@@ -22,3 +22,9 @@ export function importFonts(fonts) {
     linkSecondary.rel = 'stylesheet';
     document.head.appendChild(linkSecondary);
 }
+
+
+export function formatDateToFrench(date){
+    const options = { year: 'numeric', month: 'long' };
+    return new Date(date).toLocaleDateString('en-EN', options);
+}
