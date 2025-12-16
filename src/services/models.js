@@ -182,7 +182,7 @@
     }
 
     export class Career{
-        constructor(companyName, position, logo, background,startDate, endDate, tasks){
+        constructor(companyName, position, logo, background,startDate, endDate, tasks, id){
             this.companyName = companyName;
             this.position = position;   
             this.startDate = startDate;
@@ -190,6 +190,7 @@
             this.tasks = tasks;
             this.logo = logo;
             this.background = background;
+            this.id = id;
         }   
     }
 

@@ -958,10 +958,31 @@
     .company-logo img{
         width: 100px;
         height: auto;
-        margin-bottom: 20px;
+        margin: 0 auto 30px;
+    }
+    .company-logo, .company-logo .logo-container{
+        position: relative;
+    }
+    .company-logo .logo-container{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    .company-logo .logo-container::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 90%;
+        height: 1px;
+        background: linear-gradient(90deg, var(--Medkhair-color-secondary), transparent, transparent);
+        transform: translateY(calc(-50% - 20px)) translateX(50%);
+    }
+    .company-logo .logo-container.oriental::after{
+        width: 80%;
     }
     .companies{
-        gap: 40px;
+        gap: 10px;
     }
     .company{
         background-color: var(--Medkhair-color-primary);
@@ -971,12 +992,43 @@
         color: var(--Medkhair-color-secondary);
         cursor: pointer;
         transition: all 0.3s ease;
+        font-family: "Clash Display Variable", sans-serif;
+        position: relative;
+        z-index: 2;
     }
     .company:hover{
         background-color: var(--Medkhair-color-secondary);
         color: var(--Medkhair-color-primary);
         box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
         transform: translateY(-5px);
+    }
+    .company.active{
+        background-color: var(--Medkhair-color-secondary);
+        color: var(--Medkhair-color-primary);
+        box-shadow: 0 0 15px rgba(100, 255, 218, 0.5);
+    }
+    .companies > div{
+        position: relative;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .companies > div::after{
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        width: 90%;
+        height: 1px;
+        background: linear-gradient(90deg, transparent, var(--Medkhair-color-secondary), transparent);
+        transform: translateY(-50%) translateX(50%);
+    }
+    .companies > div:last-child::after{
+        rotate: -5deg;
+    }
+    .companies > div:first-child::after{
+        rotate: 5deg;
     }
     .company-tasks-details > *{
         margin: 0 !important;
@@ -1035,6 +1087,53 @@
         color: var(--Medkhair-color-secondary);
         font-size: 20px;
         font-weight: 600;
+    }
+
+    @media(max-width: 768px) {
+        #career {
+            padding: 20px 20px 30px;
+        }
+        .career-details{
+            margin-top: 20px;
+        }
+        .career-content {
+            flex-direction: column;
+            gap: 20px;
+        }
+        .career-content > div{
+            width: 100%;
+        }
+        .company-logo .logo-container::after {
+            width: 80%;
+            transform: translateY(calc(-50% - 20px)) translateX(40%);
+        }
+        .company-logo img{
+            width: 80px;
+            margin-bottom: 0px;
+        }
+        .company-tasks-details{
+            padding: 20px;
+        }
+        .company-tasks-details h3{
+            font-size: 20px;
+        }
+        .company-duration{
+            font-size: 14px;
+        }
+        .tasks-list li{
+            font-size: 14px;
+        }
+        .company-logo .logo-container::after, .companies > div::after{
+            display: none;
+        }
+        .companies{
+            flex-direction: row !important;
+            gap: 15px;
+        }
+        .companies button{
+            padding: 8px 20px;
+            font-size: 10px;
+        }
     }
 
 

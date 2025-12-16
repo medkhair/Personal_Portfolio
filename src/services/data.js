@@ -78,7 +78,8 @@ const careerPath = [
             "Integrate APIs to enhance functionality and user experience.",
             "Create full-stack web applications.",
             "Participated in code reviews and contributed to team meetings."
-        ]
+        ],
+        1
     ),
     new Career(
         "Digital Speak", 
@@ -91,7 +92,8 @@ const careerPath = [
             "Create Landing pages and sales funnels using different CMS with implementation of css and JavaScript customizations to integrate impressive designs.",
             "Integrate APIs to enhance functionality and user experience.",
             "Participated in code reviews and contributed to team meetings."
-        ]
+        ],
+        2
     ),
     new Career(
         "Oriental Group", 
@@ -104,7 +106,8 @@ const careerPath = [
             "Create and maintain WordPress websites for selling argan oil.",
             "Create a web application in PHP (Arganisme) to manage clients and orders.",
             "Participated in code reviews and contributed to team meetings."
-        ]
+        ],
+        3
     ),
 ];
 
