@@ -3,7 +3,7 @@ import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
 import Hero from './components/Hero'
-import { person } from './services/data'
+import { person, projects } from './services/data'
 import About from './components/About'
 import Services from './components/Services'
 import Skills from './components/Skills'
@@ -21,7 +21,9 @@ import Career from './components/Career'
 
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [count, setCount] = useState(0);
+
+  console.log(projects);
 
   return (
     <>

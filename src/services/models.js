@@ -93,7 +93,7 @@
         }
     }
 
-    export class technology {
+    export class Technology {
         constructor(name) {
             this.name = name;
         }
