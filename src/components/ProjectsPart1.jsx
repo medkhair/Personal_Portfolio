@@ -3,7 +3,7 @@ import Inner from "./Inner";
 
 function ProjectsPart1() {
   return (
-    <section className="projects-part-1" id="projects-part-1">
+    <section className="projects projects-part-1" id="projects-part-1">
         <Inner className="section-header">
           <div>
             <h2 className="section-title">A Journey Through Code & Design</h2>

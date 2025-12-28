@@ -151,7 +151,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Recipe App",
             "To build a modern frontend application that consumes and displays data from a third-party API.",
-            "",
+            "recipe_App.png",
             "",
             "",
             "",
@@ -167,7 +167,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Weather App",
             "Provide users with quick, reliable access to current weather forecasts for any city.",
-            "",
+            "WeatherApp.jpg",
             "",
             "",
             "",
@@ -182,7 +182,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "To Do List",
             "Built a clean task manager featuring add, complete, and delete functionality with a responsive UI.",
-            "",
+            "ToDoList.png",
             "",
             "",
             "",
@@ -198,7 +198,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Coffee Landing Page",
             "Create an attractive online presence for a coffee brand to engage customers and showcase products.",
-            "",
+            "coffeLanding.png",
             "",
             "",
             "",
@@ -212,7 +212,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Simple Calculator",
             "Build a functional calculator demonstrating core JavaScript logic and DOM manipulation.",
-            "",
+            "calculator.png",
             "",
             "",
             "",

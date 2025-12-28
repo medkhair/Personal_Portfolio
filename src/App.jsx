@@ -12,6 +12,7 @@ import Contact from './components/Contact'
 import Footer from './components/Footer'
 import Career from './components/Career'
 import ProjectsPart1 from './components/ProjectsPart1'
+import ProjectsPart2 from './components/ProjectsPart2'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -26,6 +27,8 @@ function App() {
 
   console.log(projects);
 
+  const frontendApps = projects.filter(project => project.category === "Landing Pages & Frontend");
+
   return (
     <>
       <Hero person={person} />
@@ -33,6 +36,7 @@ function App() {
       <Services person={person} />
       <Skills person={person} />
       <ProjectsPart1 />
+      <ProjectsPart2 projects={frontendApps} />
       <Education person={person} />
       <Career person={person} />
       <Contact person={person} />

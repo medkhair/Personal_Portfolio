@@ -103,7 +103,7 @@
     .section-header hr{
         width: 100px;
         border: 2px solid var(--Medkhair-color-secondary);
-        margin: 10px auto 0px auto;
+        margin: 0px auto 10px auto;
     }
     .section-header p{
         font-size: 18px;
@@ -728,6 +728,7 @@
 /***** Section 5 (projects) *****/
 
     /** part 1 **/
+
         #projects-part-1{
             height: 100vh;
             display: flex;
@@ -774,6 +775,201 @@
                 margin: 10px auto 20px auto;
             }
         }
+
+
+    /** part 2 **/
+
+        #projects-part-2 {
+            padding: 80px 0;
+            background: url("../src/images/part2.png");
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .projects-part-2-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+            margin-top: 50px;
+            align-items: flex-start;
+        }
+
+        .project-card {
+            background: #E2E8F0;
+            border: 1px solid rgba(100, 255, 218, 0.1);
+            border-radius: 20px;
+            transition: all 0.4s ease;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--Medkhair-color-secondary);
+            box-shadow: 0 15px 50px rgba(100, 255, 218, 0.2);
+        }
+
+        .project-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            transition: transform 0.4s ease;
+        }
+
+
+        .project-title {
+            font-size: 22px;
+            color: #000;
+            margin: 20px 20px 10px;
+            font-weight: 600;
+        }
+
+        .project-description {
+            font-size: 15px;
+            color: #333333;
+            margin: 0 20px;
+            line-height: 1.6;
+            flex-grow: 1;
+        }
+
+        .project-tech-stack {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin: 20px;
+        }
+
+        .tech-item {
+            padding: 6px 14px;
+            background: #323232;
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--Medkhair-color-secondary);
+            font-weight: 500;
+        }
+
+        .project-links {
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            gap: 15px;
+            position: relative;
+            height: 0;
+        }
+
+        .show-links-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: #323232;
+            color: var(--Medkhair-color-secondary);
+            border: none;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            transform: translateX(50%);
+            transition: all 0.3s ease;
+            z-index: 2;
+        }
+
+        .show-links-button:hover {
+            transform: translateX(50%) rotate(45deg) scale(1.05);
+            box-shadow: 0 5px 20px rgba(100, 255, 218, 0.5);
+        }
+
+        .links-dropdown {
+            display: flex;
+            gap: 10px;
+            position: absolute;
+            right: 70px;
+            animation: slideIn 0.3s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .project-link {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: rgba(100, 255, 218, 0.1);
+            border: 1px solid rgba(100, 255, 218, 0.3);
+            color: var(--Medkhair-color-secondary);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            transition: all 0.3s ease;
+            text-decoration: none;
+        }
+
+        .project-link:hover {
+            background: var(--Medkhair-color-secondary);
+            color: var(--Medkhair-color-primary);
+            transform: scale(1.1);
+        }
+
+        @media (max-width: 768px) {
+            #projects-part-2 {
+                padding: 60px 20px;
+            }
+
+            .projects-part-2-container {
+                grid-template-columns: 1fr;
+                gap: 30px;
+                margin-top: 30px;
+            }
+
+            .project-image {
+                height: 200px;
+            }
+
+            .project-title {
+                font-size: 20px;
+            }
+
+            .project-description {
+                font-size: 14px;
+            }
+
+            .tech-item {
+                font-size: 12px;
+                padding: 5px 12px;
+            }
+
+            .show-links-button {
+                width: 40px;
+                height: 40px;
+                font-size: 18px;
+            }
+
+            .links-dropdown {
+                right: 60px;
+            }
+
+            .project-link {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+        }
+
+
 
 /***** End of Section 5 (projects) *****/
 
