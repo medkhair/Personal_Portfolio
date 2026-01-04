@@ -13,6 +13,7 @@ import Footer from './components/Footer'
 import Career from './components/Career'
 import ProjectsPart1 from './components/ProjectsPart1'
 import ProjectsPart2 from './components/ProjectsPart2'
+import ProjectsPart3 from './components/ProjectsPart3'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -28,6 +29,7 @@ function App() {
   console.log(projects);
 
   const frontendApps = projects.filter(project => project.category === "Landing Pages & Frontend");
+  const miniProjects = projects.filter(project => project.category === "Mini Projects");
 
   return (
     <>
@@ -37,6 +39,7 @@ function App() {
       <Skills person={person} />
       <ProjectsPart1 />
       <ProjectsPart2 projects={frontendApps} />
+      <ProjectsPart3 projects={miniProjects} />
       <Education person={person} />
       <Career person={person} />
       <Contact person={person} />

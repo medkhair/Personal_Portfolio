@@ -81,7 +81,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             new Date(2024, 11, 10), 
             null,
             [
-                "Create Landing pages and sales funnels using different CMS with implementation of css and JavaScript customizations to integrate impressive designs.",
+                "Build landing pages and sales funnels with custom CSS and JavaScript.",
                 "Integrate APIs to enhance functionality and user experience.",
                 "Create full-stack web applications.",
                 "Participated in code reviews and contributed to team meetings."
@@ -96,7 +96,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             new Date(2024, 12, 10), 
             new Date(2025, 5, 9), 
             [
-                "Create Landing pages and sales funnels using different CMS with implementation of css and JavaScript customizations to integrate impressive designs.",
+                "Build landing pages and sales funnels with custom CSS and JavaScript.",
                 "Integrate APIs to enhance functionality and user experience.",
                 "Participated in code reviews and contributed to team meetings."
             ],
@@ -229,7 +229,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "E-Sagim",
             "Build a secure, scalable system to handle complex relationships between students, courses, and faculty.",
-            "",
+            "E-Sagim.png",
             "",
             "",
             "",
@@ -250,7 +250,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Rate Movies",
             "A dynamic web app featuring movie search, personal ratings, and watchlist functionality.",
-            "",
+            "RateMovies.jpg",
             "",
             "",
             "",
@@ -268,7 +268,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "My Taste",
             "Help food enthusiasts discover traditional dishes from every country and explore global culinary cultures.",
-            "",
+            "MyTaste.jpg",
             "",
             "",
             "",
@@ -286,7 +286,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Kids Club Manager",
             "Create an all-in-one solution for managing kids' extracurriculars, payments, and communications.",
-            "",
+            "kids.jpg",
             "",
             "",
             "",
@@ -301,7 +301,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Botola Shop",
             "Create an online destination for Moroccan football fans to officially purchase their favorite team merchandise.",
-            "",
+            "BotolaShop.jpg",
             "",
             "",
             "",
@@ -321,7 +321,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Arganisme",
             "A visually elegant e-commerce site featuring product storytelling, educational content, and seamless purchasing.",
-            "",
+            "Arganisme.jpg",
             "",
             "",
             "",
@@ -341,7 +341,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Livraison de petits déjeuners",
             "Build a scalable backend using Java Servlets to power a food delivery platform's core operations.",
-            "",
+            "petit-dejeuner.jpg",
             "",
             "",
             "",
@@ -355,7 +355,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Flight Reservation System Manager",
             "Demonstrate object-oriented programming principles by building a complex reservation system with multiple interacting entities.",
-            "",
+            "Flight.jpg",
             "",
             "",
             "",
@@ -368,7 +368,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Project(
             "Contact Manager Java",
             "Create an efficient terminal-based system to manage personal and professional contacts with full CRUD operations.",
-            "",
+            "contact-management.png",
             "",
             "",
             "",
