@@ -14,6 +14,7 @@ import Career from './components/Career'
 import ProjectsPart1 from './components/ProjectsPart1'
 import ProjectsPart2 from './components/ProjectsPart2'
 import ProjectsPart3 from './components/ProjectsPart3'
+import ProjectsPart4 from './components/ProjectsPart4'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -30,6 +31,7 @@ function App() {
 
   const frontendApps = projects.filter(project => project.category === "Landing Pages & Frontend");
   const miniProjects = projects.filter(project => project.category === "Mini Projects");
+  const fullstackProjects = projects.filter(project => project.category === "Full Stack Apps");
 
   return (
     <>
@@ -40,6 +42,7 @@ function App() {
       <ProjectsPart1 />
       <ProjectsPart2 projects={frontendApps} />
       <ProjectsPart3 projects={miniProjects} />
+      <ProjectsPart4 projects={fullstackProjects} />
       <Education person={person} />
       <Career person={person} />
       <Contact person={person} />

@@ -781,7 +781,7 @@
 
         #projects-part-2 {
             padding: 80px 0;
-            background: url("../src/images/part2.png");
+            background: linear-gradient(180deg, var(--Medkhair-color-tercairy) 0%, var(--Medkhair-color-primary)100%);
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
@@ -896,7 +896,7 @@
             flex-direction: column;
         }
 
-        .projects-part-2 .links-dropdown > a:nth-child(1),  .links-dropdown > a:nth-child(3){
+        .projects-part-2 .links-dropdown > a:nth-child(1), .projects-part-2  .links-dropdown > a:nth-child(3){
             transform: translateX(-50%);
         }
 
@@ -959,6 +959,9 @@
             .projects-part-2 .project-description {
                 font-size: 14px;
             }
+            .projects-part-2 .project-tech-stack{
+                justify-content: center;
+            }
 
             .projects-part-2 .tech-item {
                 font-size: 12px;
@@ -985,7 +988,7 @@
     /** part 3 **/
 
         #projects-part-3 {
-            padding: 80px 0;
+            padding:0;
             background: linear-gradient(180deg, var(--Medkhair-color-primary) 0%, #1E216D 50% , rgba(106,90,205,.12) 100%);
             background-position: center;
             background-size: cover;
@@ -1131,7 +1134,7 @@
 
         @media (max-width: 768px) {
             #projects-part-3 {
-                padding: 60px 20px;
+                padding: 0px 20px;
             }
 
             .projects-part-3 .projects-part-3-container {
@@ -1189,6 +1192,325 @@
                 font-size: 18px;
             }
         }
+
+        /** part 4 **/
+
+            #projects-part-4 {
+                padding: 80px 0;
+                background: linear-gradient(180deg,rgba(106,90,205,.12) 0%, rgba(75,31,62,.5) 50% , rgba(255,100,200,.12) 75% , rgba(11, 30, 52, 1) 100%);
+                background-position: center;
+                background-size: cover;
+                background-repeat: no-repeat;
+            }
+
+            .projects-part-4 .projects-part-4-container {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 30px;
+                margin-top: 50px;
+                padding: 0px 20px;
+                align-items: flex-start;
+            }
+
+            .projects-part-4 .project-card {
+                background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+                border: 1px solid rgba(145, 66, 73, 0.2);
+                border-radius: 25px;
+                overflow: hidden;
+                transition: all 0.4s ease;
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                backdrop-filter: blur(10px);
+            }
+
+            .projects-part-4 .project-card::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: -100%;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(90deg, transparent, rgba(100, 255, 218, 0.1), transparent);
+                transition: left 0.5s ease;
+            }
+
+            .projects-part-4 .project-card:hover::before {
+                left: 100%;
+            }
+
+            .projects-part-4 .project-card:hover {
+                transform: scale(1.03);
+                border-color: #914249;
+                box-shadow: 0 20px 60px rgba(145, 66, 73, 0.3);
+            }
+
+            .projects-part-4 .project-image {
+                width: 100%;
+                height: 220px;
+                object-fit: cover;
+                transition: all 0.4s ease;
+                filter: grayscale(20%);
+            }
+
+            .projects-part-4 .project-card:hover .project-image {
+                filter: grayscale(0%);
+            }
+
+            .projects-part-4 .project-title {
+                font-size: 20px;
+                color: #fff;
+                margin: 20px 25px 10px;
+                font-weight: 600;
+                position: relative;
+                display: inline-block;
+                width: fit-content;
+            }
+
+            .projects-part-4 .project-title::after {
+                content: "";
+                position: absolute;
+                bottom: -5px;
+                left: 0;
+                width: 0;
+                height: 2px;
+                background: #914249;
+                transition: width 0.3s ease;
+            }
+
+            .projects-part-4 .project-card:hover .project-title::after {
+                width: 100%;
+            }
+
+            .projects-part-4 .project-description {
+                font-size: 14px;
+                color: #CBD5E1;
+                margin: 0 25px 15px;
+                line-height: 1.7;
+                flex-grow: 1;
+            }
+
+            .projects-part-4 .project-tech-stack {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 8px;
+                margin: 0 25px 20px;
+            }
+
+            .projects-part-4 .tech-item {
+                padding: 5px 12px;
+                background: #914249;
+                border: 1px solid #FFF;
+                border-radius: 5px;
+                font-size: 12px;
+                color: #FFF;
+                font-weight: 600;
+                letter-spacing: 0.5px;
+            }
+
+            .projects-part-4 .project-links {
+                padding: 0 25px 25px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .projects-part-4 .links-dropdown {
+                display: flex;
+                gap: 15px;
+                width: 100%;
+                justify-content: center;
+            }
+
+            .projects-part-4 .project-link {
+                flex: 1;
+                max-width: 150px;
+                height: 45px;
+                border-radius: 12px;
+                background: #914249;
+                color: var(--Medkhair-color-primary);
+                border: 2px solid #914249;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                gap: 8px;
+                font-size: 16px;
+                font-weight: 600;
+                transition: all 0.3s ease;
+                text-decoration: none;
+            }
+
+            .projects-part-4 .project-link:hover {
+                background: transparent;
+                color: #914249;
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(100, 255, 218, 0.4);
+            }
+
+            .projects-part-4 .project-link i {
+                font-size: 18px;
+            }
+
+            @media (max-width: 768px) {
+                #projects-part-4 {
+                    padding: 60px 20px;
+                }
+
+                .projects-part-4 .projects-part-4-container {
+                    grid-template-columns: 1fr;
+                    gap: 25px;
+                    margin-top: 30px;
+                }
+
+                .projects-part-4 .project-image {
+                    height: 180px;
+                }
+
+                .projects-part-4 .project-title {
+                    font-size: 18px;
+                    margin: 15px auto 8px;
+                }
+
+                .projects-part-4 .project-description {
+                    font-size: 13px;
+                    margin: 0 20px 12px;
+                }
+
+                .projects-part-4 .project-tech-stack {
+                    margin: 0 20px 15px;
+                    gap: 6px;
+                    justify-content: center;
+                }
+
+                .projects-part-4 .tech-item {
+                    font-size: 11px;
+                    padding: 4px 10px;
+                }
+
+                .projects-part-4 .project-links {
+                    padding: 0 20px 20px;
+                }
+
+                .projects-part-4 .project-link {
+                    height: 40px;
+                    font-size: 14px;
+                }
+
+                .projects-part-4 .project-link i {
+                    font-size: 16px;
+                }
+            }
+
+            .projects-part-4 .project-links {
+                padding: 0 25px 25px;
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 12px;
+                position: relative;
+                margin-top: auto;
+            }
+
+            .projects-part-4 .show-links-button {
+                border-radius: 12px;
+                background: #914249;
+                color: #FFF;
+                border: none;
+                cursor: pointer;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                transition: all 0.3s ease;
+                z-index: 2;
+                flex-shrink: 0;
+                padding: 10px 15px;
+            }
+
+            .projects-part-4 .show-links-button:hover {
+                transform: rotate(90deg) scale(1.1);
+                box-shadow: 0 8px 25px rgba(145, 66, 73, 0.6);
+                background: #fff;
+                color: var(--Medkhair-color-primary);
+            }
+
+            .projects-part-4 .links-dropdown {
+                display: flex;
+                gap: 12px;
+                animation: slideInFromLeft 0.4s ease-out;
+            }
+
+            @keyframes slideInFromLeft {
+                from {
+                    opacity: 0;
+                    transform: translateX(-15px);
+                }
+                to {
+                    opacity: 1;
+                    transform: translateX(0);
+                }
+            }
+
+            .projects-part-4 .project-link {
+                width: 50px;
+                height: 50px;
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.08);
+                border: 2px solid #914249;
+                color: #FFF;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 22px;
+                transition: all 0.3s ease;
+                text-decoration: none;
+                position: relative;
+                overflow: hidden;
+            }
+
+            .projects-part-4 .project-link::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: #914249;
+                transform: translateY(100%);
+                transition: transform 0.3s ease;
+                z-index: -1;
+            }
+
+            .projects-part-4 .project-link:hover::before {
+                transform: translateY(0);
+            }
+
+            .projects-part-4 .project-link:hover {
+                color: var(--Medkhair-color-primary);
+                border-color: #914249;
+                transform: translateY(-5px);
+                box-shadow: 0 8px 20px rgba(145, 66, 73, 0.4);
+            }
+
+            @media (max-width: 768px) {
+                .projects-part-4 .project-links {
+                    padding: 0 20px 20px;
+                    gap: 10px;
+                }
+
+                .projects-part-4 .show-links-button {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 20px;
+                }
+
+                .projects-part-4 .project-link {
+                    width: 45px;
+                    height: 45px;
+                    font-size: 20px;
+                }
+            }
+
 /***** End of Section 5 (projects) *****/
 
 /***** Section 6 (education) *****/
