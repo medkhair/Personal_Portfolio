@@ -62,35 +62,35 @@ function ProjectsPart2({projects}) {
                                     {
                                         (showLinks && (selectedProjectIndex === index)) ? 
                                             <div className="links-dropdown">
-                                                {/*
+                                                {
                                                     project.githubUrl != "" ?
-                                                    */
-                                                        <a href={project.designUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-github"></i></a>
-                                                        /*
+                                                    
+                                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-github"></i></a>
+                                                        
                                                     :
                                                         null
-                                                        */
+                                                        
                                                 }
                                                 {
-                                                    /*
+                                                    
                                                     project.designUrl != "" ?
 
-                                                    */
-                                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-palette"></i></a>
-                                                    /*
+                                                    
+                                                        <a href={project.designUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-palette"></i></a>
+                                                    
                                                         :
                                                         null
-                                                        */
+                                                        
                                                 }
                                                 {
-                                                    /*
+                                                    
                                                     project.liveUrl != "" ?        
-                                                    */                             
-                                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-globe"></i></a> 
-                                                    /*
+                                                                                 
+                                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-globe"></i></a> 
+                                                    
                                                         : 
                                                         null
-                                                        */
+                                                        
                                                 }
                                             </div>
                                         : null
