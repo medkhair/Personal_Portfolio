@@ -1,4 +1,4 @@
-import Form from "../tools/form";
+import Form from "../tools/Form";
 import Inner from "./Inner";
 import { useState } from "react";
 import emailjs from '@emailjs/browser';
