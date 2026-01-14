@@ -34,7 +34,7 @@ function Career({person}) {
                         </div>
                         <div className={`company-logo`}>
                             <div  className={`logo-container ${selectedCompany.id === 3 ? 'oriental' : ''}`} >
-                                <img src={`../src/images/${selectedCompany.logo}`} alt={selectedCompany.company} />
+                                <img src={`/images/${selectedCompany.logo}`} alt={selectedCompany.company} />
                             </div>
                         </div>
                         <div className="companie-tasks">

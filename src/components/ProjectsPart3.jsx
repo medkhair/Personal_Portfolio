@@ -43,7 +43,7 @@ function ProjectsPart3({projects}) {
                         projects.map((project, index) => (
                             
                             <div className="project-card" key={index}>
-                                <img src={`../src/images/projects/${project.image}`} alt={project.name} className="project-image" />
+                                <img src={`/images/projects/${project.image}`} alt={project.name} className="project-image" />
                                 <div>
                                     <div className="project-content-top">
                                         <h3 className="project-title">{project.name}</h3>
