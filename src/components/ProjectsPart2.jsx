@@ -57,7 +57,7 @@ function ProjectsPart2({projects}) {
                                             }
                                         }
                                     } >
-                                        <i class="bi bi-arrow-up-right"></i>
+                                        <i className="bi bi-arrow-up-right"></i>
                                     </button>
                                     {
                                         (showLinks && (selectedProjectIndex === index)) ? 
@@ -65,7 +65,7 @@ function ProjectsPart2({projects}) {
                                                 {
                                                     project.githubUrl != "" ?
                                                     
-                                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-github"></i></a>
+                                                        <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i className="bi bi-github"></i></a>
                                                         
                                                     :
                                                         null
@@ -76,7 +76,7 @@ function ProjectsPart2({projects}) {
                                                     project.designUrl != "" ?
 
                                                     
-                                                        <a href={project.designUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-palette"></i></a>
+                                                        <a href={project.designUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i className="bi bi-palette"></i></a>
                                                     
                                                         :
                                                         null
@@ -86,7 +86,7 @@ function ProjectsPart2({projects}) {
                                                     
                                                     project.liveUrl != "" ?        
                                                                                  
-                                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i class="bi bi-globe"></i></a> 
+                                                        <a href={project.liveUrl} target="_blank" rel="noopener noreferrer" className="project-link"><i className="bi bi-globe"></i></a> 
                                                     
                                                         : 
                                                         null

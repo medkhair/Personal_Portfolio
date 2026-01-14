@@ -26,7 +26,7 @@ function Career({person}) {
                         <div className="companies">
                             {
                                 person.careers.map((career, index) => (
-                                    <div >
+                                    <div key={index} className="company-button-wrapper">
                                         <button key={index} className={`company ${career.id === selectedCompany.id ? 'active' : ''}`} onClick={()=>{handleCompanyClick(career)}} > {career.position} </button>
                                     </div>
                                 ))

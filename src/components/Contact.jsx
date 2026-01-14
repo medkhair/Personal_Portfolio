@@ -1,6 +1,7 @@
 import Form from "../tools/form";
 import Inner from "./Inner";
 import { useState } from "react";
+import emailjs from '@emailjs/browser';
 
 
 function Contact({person}) {
@@ -12,6 +13,8 @@ function Contact({person}) {
         serviceType: "",
         message: ""
     });
+
+    const [status, setStatus] = useState("");
 
     const onSubmit = async (e) => {
         e.preventDefault();
@@ -35,6 +38,7 @@ function Contact({person}) {
 
             console.log('Email sent successfully:', result.text);
             setStatus("success");
+            console.log("Form data:", form);
             setForm({
                 name: "",
                 email: "",
@@ -66,7 +70,7 @@ function Contact({person}) {
                 </Inner>
                 <Inner className="contact-details">
                     <div className="form-group">
-                        <Form services={servicesName} form={form} setForm={setForm} onSubmit={onSubmit} />
+                        <Form services={servicesName} form={form} setForm={setForm} onSubmit={onSubmit} status={status} />
                     </div>
                 </Inner>
             </section>

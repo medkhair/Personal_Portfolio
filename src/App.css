@@ -2046,6 +2046,17 @@
         transform: translateX(5px);
     }
 
+    .form-status {
+        grid-column: 1 / -1;
+    }
+
+    .form-status p {
+        text-align: center;
+        font-size: 15px;
+        margin: 0;
+        color: var(--Medkhair-color-secondary);
+    }
+
     @media (max-width: 768px) {
         #contact {
             padding: 60px 20px;

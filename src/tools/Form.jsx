@@ -1,4 +1,4 @@
-function Form({services, form, setForm, onSubmit}) {
+function Form({services, form, setForm, onSubmit, status}) {
     return (
         <form onSubmit={onSubmit} className="contact-form">
            <div className="form-group name">
@@ -15,12 +15,12 @@ function Form({services, form, setForm, onSubmit}) {
            </div>
            <div className="form-group service-type">
                 <label htmlFor="service-type">Service Type</label>
-                <select id="service-type" name="service-type" onChange={(e)=>{setForm({...form, serviceType: e.target.value})}} required>
-                    <option value="" disabled selected>Select a service</option>
+                <select id="service-type" name="service-type" value={form.serviceType} onChange={(e)=>{setForm({...form, serviceType: e.target.value})}} required>
+                    <option value="" disabled>Select a service</option>
                     {services.map((service, index) => (
-                        <option key={index} value={service}>{service}</option>
+                         <option key={index} value={service}>{service}</option>
                     ))}
-                </select>
+               </select>
            </div>
            <div className="form-group message">
                 <label htmlFor="message">Your Message</label>
@@ -29,6 +29,9 @@ function Form({services, form, setForm, onSubmit}) {
            <button className="button secondary submit-btn" type="submit">
                 Send Message
            </button>
+           <div className="form-status">
+                {status === "success" && <p className="success-message">Your message has been sent successfully!</p>}
+           </div>
         </form>
     );
 }

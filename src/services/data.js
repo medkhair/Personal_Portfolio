@@ -229,7 +229,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             "E-Sagim",
             "Build a secure, scalable system to handle complex relationships between students, courses, and faculty.",
             "E-Sagim.png",
-            "https://e-sagim-front-l5ur.vercel.app/etudiant/login",
+            "https://e-sagim-front-l5ur.vercel.app",
             "https://github.com/medkhair/E-SAGIM-Front",
             "https://www.figma.com/design/HlEr3hqwQIlmlw9ja4bbww/E-SAGIM?node-id=0-1&t=yosBjfmqoBVQSNVQ-1",
             [
