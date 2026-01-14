@@ -28,7 +28,7 @@ function Hero({person}){
                         <p>{person.description}</p>
                         <div className="buttons">
                             <a href="#projects-part-1" className="button primary">View My work</a>
-                            <a href="../src/assets/CV__Mohammed-khair_Souiba_EN.pdf" target="_blank" className="button secondary">Download CV</a>
+                            <a href="/assets/CV__Mohammed-khair_Souiba_EN.pdf" target="_blank" className="button secondary">Download CV</a>
                         </div>
                         <div className="buttons social-icons">
                             <a href="https://github.com/medkhair" target="_blank" className="button primary"><i className="bi bi-github" ></i></a>
