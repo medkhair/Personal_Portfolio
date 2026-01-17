@@ -27,8 +27,6 @@ import ProjectsPart4 from './components/ProjectsPart4'
 function App() {
   const [count, setCount] = useState(0);
 
-  console.log(projects);
-
   const frontendApps = projects.filter(project => project.category === "Landing Pages & Frontend");
   const miniProjects = projects.filter(project => project.category === "Mini Projects");
   const fullstackProjects = projects.filter(project => project.category === "Full Stack Apps");

@@ -128,14 +128,7 @@
 
 /***** Hero Section *****/
 
-    #hero {
-        height: 100vh;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        overflow: hidden;
-    }
-
+    
     .hero h1 {
         font-size: 60px;
         margin: 0;
@@ -267,6 +260,215 @@
         100% {
             width: 100%;
             opacity: 0;
+        }
+    }
+    .annimated-particles {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        z-index: 0;
+        pointer-events: none;
+    }
+
+    .particle {
+        position: absolute;
+        opacity: 0.6;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+    }
+
+    .particle img {
+        width: 70px;
+        height: auto;
+        filter: drop-shadow(0 0 10px rgba(100, 255, 218, 0.3));
+    }
+
+    /* Individual particle animations */
+    .particle-1 {
+        top: 10%;
+        left: 15%;
+        animation: float1 20s infinite;
+    }
+
+    .particle-2 {
+        top: 70%;
+        left: 20%;
+        animation: float2 18s infinite;
+    }
+
+    .particle-3 {
+        top: 25%;
+        left: 45%;
+        animation: float3 22s infinite;
+    }
+
+    .particle-4 {
+        top: 80%;
+        left: 50%;
+        animation: float4 19s infinite;
+    }
+
+    .particle-5 {
+        top: 15%;
+        right: 15%;
+        animation: float5 21s infinite;
+    }
+
+    .particle-6 {
+        top: 50%;
+        right: 10%;
+        animation: float6 17s infinite;
+    }
+
+    .particle-7 {
+        top: 85%;
+        left: 80%;
+        animation: float7 23s infinite;
+    }
+
+    .particle-8 {
+        top: 40%;
+        left: 0;
+        animation: float8 20s infinite;
+    }
+
+    .particle-9 {
+        top: 60%;
+        right: 25%;
+        animation: float9 24s infinite;
+    }
+
+    /* Floating keyframes */
+    @keyframes float1 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        25% {
+            transform: translate(30px, -40px) rotate(90deg);
+        }
+        50% {
+            transform: translate(60px, 20px) rotate(180deg);
+        }
+        75% {
+            transform: translate(30px, 60px) rotate(270deg);
+        }
+    }
+
+    @keyframes float2 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        33% {
+            transform: translate(-40px, 30px) rotate(120deg);
+        }
+        66% {
+            transform: translate(20px, -50px) rotate(240deg);
+        }
+    }
+
+    @keyframes float3 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        30% {
+            transform: translate(-50px, -30px) rotate(108deg);
+        }
+        60% {
+            transform: translate(40px, 40px) rotate(216deg);
+        }
+    }
+
+    @keyframes float4 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        40% {
+            transform: translate(35px, -45px) rotate(144deg);
+        }
+        80% {
+            transform: translate(-35px, 35px) rotate(288deg);
+        }
+    }
+
+    @keyframes float5 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        50% {
+            transform: translate(-60px, 50px) rotate(180deg);
+        }
+    }
+
+    @keyframes float6 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        35% {
+            transform: translate(45px, 35px) rotate(126deg);
+        }
+        70% {
+            transform: translate(-45px, -45px) rotate(252deg);
+        }
+    }
+
+    @keyframes float7 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        45% {
+            transform: translate(-30px, -60px) rotate(162deg);
+        }
+        90% {
+            transform: translate(50px, 30px) rotate(324deg);
+        }
+    }
+
+    @keyframes float8 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        50% {
+            transform: translate(40px, -40px) rotate(180deg);
+        }
+    }
+
+    @keyframes float9 {
+        0%, 100% {
+            transform: translate(0, 0) rotate(0deg);
+        }
+        33% {
+            transform: translate(-55px, 45px) rotate(120deg);
+        }
+        66% {
+            transform: translate(30px, -30px) rotate(240deg);
+        }
+    }
+
+    @media (max-width: 768px) {
+        .particle img {
+            width: 25px;
+            height: 25px;
+        }
+
+        .annimated-particles {
+            display: none; /* Hide on mobile for better performance */
+        }
+    }
+    @media (max-width: 1400px){
+        #hero {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden;
+        }
+    }
+    @media (min-width: 1400px){
+        #hero {
+            padding: 20px 50px 40px;
         }
     }
     @media (max-width: 768px) {
@@ -1523,7 +1725,7 @@
 
     #education {
         padding: 80px 0;
-        background: rgba(11, 30, 52, 1);
+        background: linear-gradient(180deg, rgba(11, 30, 52, 1), rgba(0, 0, 0, .8));
     }
 
     .education-container {
@@ -1742,7 +1944,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: flex-end;
+        justify-content: center;
     }
     .company-logo img{
         width: 100px;
@@ -1877,7 +2079,11 @@
         font-size: 20px;
         font-weight: 600;
     }
-
+    @media (min-width: 768px){
+        .company-tasks-details{
+            min-height: 310px;
+        }
+    }
     @media(max-width: 768px) {
         #career {
             padding: 20px 20px 30px;
@@ -1932,7 +2138,7 @@
 
     #contact {
         padding: 80px 0;
-        background: var(--Medkhair-color-primary);
+        background: linear-gradient(180deg, rgba(0, 0, 0, .8), var(--Medkhair-color-primary));
     }
 
     .contact-details {

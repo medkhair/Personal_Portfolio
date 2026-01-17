@@ -41,6 +41,35 @@ function Hero({person}){
                         </div>
                     </div>
                 </Inner>
+                <div className="annimated-particles">
+                    <div className="particle particle-1">
+                        <img src="/images/icons/React-icon.svg.png" alt="Medkhair Logo" />
+                    </div>
+                    <div className="particle particle-2">
+                        <img src="/images/icons/css-3-logo-png_seeklogo-426084.png" alt="Medkhair Logo" />
+                    </div>
+                    <div className="particle particle-3">
+                        <img src="/images/icons/Git-Icon-1788C.png" alt="Medkhair Logo" />
+                    </div>  
+                    <div className="particle particle-4">
+                        <img src="/images/icons/HTML5_logo_and_wordmark.svg.png" alt="Medkhair Logo" />
+                    </div>
+                    <div className="particle particle-5">
+                        <img src="/images/icons/Java_Logo.svg" alt="Medkhair Logo" />
+                    </div>
+                    <div className="particle particle-6">
+                        <img src="/images/icons/javascript-seeklogo.com.svg" alt="Medkhair Logo" />
+                    </div>  
+                    <div className="particle particle-7">
+                        <img src="/images/icons/mysql-1-logo-png-transparent.png" alt="Medkhair Logo" />
+                    </div>
+                    <div className="particle particle-8">
+                        <img src="/images/icons/PHP-logo.svg.png" alt="Medkhair Logo" />
+                    </div>
+                    <div className="particle particle-9">
+                        <img src="/images/icons/spring-boot-1.svg" alt="Medkhair Logo" />
+                    </div>  
+                </div>
             </section>
 
         </>

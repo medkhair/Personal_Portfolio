@@ -3,7 +3,6 @@ import { formatDateToFrench } from "../services/functions";
 
 function CompanyTasks({company}) {
 
-    console.log(company.startDate.getFullYear());
 
     return (
 
