@@ -783,7 +783,7 @@
 /***** Section 4 (skills) *****/
 
     #skills {
-        padding: 40px 20px 40px;
+        padding: 40px 20px 80px;
         background: var(--Medkhair-color-primary);
     }
 
@@ -796,8 +796,8 @@
 
     .skills-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 40px;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 20px;
     }
 
     .skill-category {

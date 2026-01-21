@@ -338,9 +338,9 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         /* ===== Mini Projects ===== */
 
         new Project(
-            "Livraison de petits déjeuners",
+            "Breakfast delivery App",
             "Build a scalable backend using Java Servlets to power a food delivery platform's core operations.",
-            "petit-dejeuner.jpg",
+            "dilevry.png",
             "",
             "https://github.com/medkhair/Livraison-de-petits-d-jeuners",
             "",
