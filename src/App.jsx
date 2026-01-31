@@ -44,7 +44,7 @@ function App() {
       <Education person={person} />
       <Career person={person} />
       <Contact person={person} />
-      <Footer />
+      <Footer person={person} />
     </>
   )
 }
