@@ -133,8 +133,9 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Technology("MySQL"),         // 9
         new Technology("PHP"),           // 10
         new Technology("React Native"),  // 11
-        new Technology("Supabase"),      // 12
-        new Technology("JEE")            // 13
+        new Technology("Superbase"),      // 12
+        new Technology("JEE") ,
+        new Technology("Postgresql")          // 13
     ];
 
     export const categories = [
@@ -225,6 +226,26 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         /* ===== Full Stack Apps ===== */
 
+        new Project(
+            "Broadkast",
+            "a studio booking platform that streamlines the process of scheduling and managing studio sessions for artists and producers.",
+            "broadkast.png",
+            "https://book.broadkast.studio/",
+            "",
+            "",
+            [
+                technologies[0].name,
+                technologies[1].name,
+                technologies[2].name,
+                technologies[3].name,
+                technologies[5].name,
+                technologies[6].name,
+                technologies[7].name,
+                technologies[8].name,
+                technologies[14].name
+            ],
+            categories[1].name
+        ),
         new Project(
             "E-Sagim",
             "Build a secure, scalable system to handle complex relationships between students, courses, and faculty.",
