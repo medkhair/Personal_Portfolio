@@ -83,6 +83,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
                 "Build landing pages and sales funnels with custom CSS and JavaScript.",
                 "Integrate APIs to enhance functionality and user experience.",
                 "Create full-stack web applications.",
+                "Develop custom automation solutions using code to streamline business workflows.",
                 "Participated in code reviews and contributed to team meetings."
             ],
             1
@@ -433,6 +434,11 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
                 "Sale Funnels",
                 "Creating effective sales funnels to guide your customers through the buying process.",
                 "funnel.png"
+            ),
+            new Service(
+                "Custom Automations",
+                "Streamline your business workflows with custom-coded automation solutions that save time and reduce errors.",
+                "automation.png"
             )
         ],
         skills,

@@ -677,6 +677,11 @@
     #services p{
         color: #707070;
     }
+    .services-list{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
     .service-item {
         background: rgba(255, 255, 255, 0.03);
         border: 1px solid rgba(100, 255, 218, 0.1);
@@ -752,11 +757,13 @@
             grid-template-columns: repeat(2, 1fr);
             gap: 20px;
         }
+        /*
         .service-item:last-child:nth-child(odd) {
             grid-column: 1 / -1;
             max-width: 50%;
             margin: 0 auto;
         }
+            */
     }
     @media (max-width: 768px) {
         #services {
@@ -772,6 +779,7 @@
         .services-list{
             margin-top: -10px;
             gap: 5px;
+            grid-template-columns: repeat(1, 1fr);
         }
     }
 
