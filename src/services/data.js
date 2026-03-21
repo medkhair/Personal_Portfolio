@@ -74,7 +74,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
     const careerPath = [
         new Career(
             "Digital Speak", 
-            "Web Developer",
+            "Full-stack web developer",
             "DigitalSpeak_Logo.png",
             "DigitalSpeak_Bg.jpg",
             new Date(2024, 11, 10), 
