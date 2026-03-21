@@ -77,30 +77,17 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             "Web Developer",
             "DigitalSpeak_Logo.png",
             "DigitalSpeak_Bg.jpg",
-            new Date(2025, 4, 10), 
+            new Date(2024, 11, 10), 
             null,
             [
-                "Build landing pages and sales funnels with custom CSS and JavaScript.",
-                "Integrate APIs to enhance functionality and user experience.",
-                "Create full-stack web applications.",
-                "Develop custom automation solutions using code to streamline business workflows.",
+                "Building landing pages and sales funnels with custom CSS and JavaScript.",
+                "Integrating APIs to enhance functionality and user experience.",
+                "Creating full-stack web applications.",
+                "Developing custom automation solutions using code to streamline business workflows.",
+                "Leading a team in the development of full-stack applications",
                 "Participated in code reviews and contributed to team meetings."
             ],
             1
-        ),
-        new Career(
-            "Digital Speak", 
-            "Intern web Developer",
-            "DigitalSpeak_Logo.png",
-            "DigitalSpeak_Bg.jpg",
-            new Date(2024, 11, 10), 
-            new Date(2025, 4, 9), 
-            [
-                "Build landing pages and sales funnels with custom CSS and JavaScript.",
-                "Integrate APIs to enhance functionality and user experience.",
-                "Participated in code reviews and contributed to team meetings."
-            ],
-            2
         ),
         new Career(
             "Oriental Group", 
