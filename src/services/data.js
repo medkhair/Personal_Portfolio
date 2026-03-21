@@ -154,7 +154,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             "A sleek and modern portfolio website designed for a UGC content creator, showcasing their work, services, and brand collaborations with an elegant and responsive layout.",
             "oumaima.png",
             "https://oumaima-mahdidi.vercel.app/",
-            "",
+            "https://github.com/medkhair/Oumaima_Portfolio_UGC",
             "",
             [
                 technologies[0].name,
