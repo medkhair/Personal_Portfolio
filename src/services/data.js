@@ -150,6 +150,37 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         /* ===== Landing Pages & Frontend ===== */
 
         new Project(
+            "Oumaima UGC Portfolio",
+            "A sleek and modern portfolio website designed for a UGC content creator, showcasing their work, services, and brand collaborations with an elegant and responsive layout.",
+            "oumaima.png",
+            "https://oumaima-mahdidi.vercel.app/",
+            "",
+            "",
+            [
+                technologies[0].name,
+                technologies[1].name,
+                technologies[2].name,
+                technologies[3].name
+            ],
+            categories[0].name
+        ),
+
+
+        new Project(
+            "Coffee Landing Page",
+            "Create an attractive online presence for a coffee brand to engage customers and showcase products.",
+            "coffeLanding.png",
+            "https://medkhair.github.io/Coffee_LandingPage/",
+            "https://github.com/medkhair/Coffee_LandingPage",
+            "https://www.figma.com/design/Yh2f2K451TBtVLbPJ09smP/Bean-Scene-Coffee-Landingpage--Community-?node-id=0-1&t=5CxDQxoOOQdmAPGZ-1",
+            [
+                technologies[0].name,
+                technologies[1].name
+            ],
+            categories[0].name
+        ),
+
+        new Project(
             "Recipe App",
             "To build a modern frontend application that consumes and displays data from a third-party API.",
             "recipe_App.png",
@@ -196,19 +227,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             categories[0].name
         ),
 
-        new Project(
-            "Coffee Landing Page",
-            "Create an attractive online presence for a coffee brand to engage customers and showcase products.",
-            "coffeLanding.png",
-            "https://medkhair.github.io/Coffee_LandingPage/",
-            "https://github.com/medkhair/Coffee_LandingPage",
-            "https://www.figma.com/design/Yh2f2K451TBtVLbPJ09smP/Bean-Scene-Coffee-Landingpage--Community-?node-id=0-1&t=5CxDQxoOOQdmAPGZ-1",
-            [
-                technologies[0].name,
-                technologies[1].name
-            ],
-            categories[0].name
-        ),
+        
 
         new Project(
             "Simple Calculator",
