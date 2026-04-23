@@ -1,9 +1,6 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import Hero from './components/Hero'
-import { person, projects } from './services/data'
+import { person, projects, testimonials } from './services/data'
 import About from './components/About'
 import Services from './components/Services'
 import Skills from './components/Skills'
@@ -15,6 +12,9 @@ import ProjectsPart1 from './components/ProjectsPart1'
 import ProjectsPart2 from './components/ProjectsPart2'
 import ProjectsPart3 from './components/ProjectsPart3'
 import ProjectsPart4 from './components/ProjectsPart4'
+import Navbar from './components/Navbar'
+import Testimonials from './components/Testimonials'
+import AnimatedSection from './components/AnimatedSection'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -25,7 +25,6 @@ import ProjectsPart4 from './components/ProjectsPart4'
 
 
 function App() {
-  const [count, setCount] = useState(0);
 
   const frontendApps = projects.filter(project => project.category === "Landing Pages & Frontend");
   const miniProjects = projects.filter(project => project.category === "Mini Projects");
@@ -34,16 +33,27 @@ function App() {
   return (
     <>
       <Hero person={person} />
-      <About person={person} />
-      <Services person={person} />
-      <Skills person={person} />
+      <AnimatedSection>
+        <About person={person} />
+      </AnimatedSection>
+        <Services person={person} />
+      <AnimatedSection>
+        <Skills person={person} />
+      </AnimatedSection>
+
       <ProjectsPart1 />
       <ProjectsPart2 projects={frontendApps} />
       <ProjectsPart3 projects={miniProjects} />
       <ProjectsPart4 projects={fullstackProjects} />
-      <Education person={person} />
-      <Career person={person} />
-      <Contact person={person} />
+      <AnimatedSection>
+        <Education person={person} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Career person={person} />
+      </AnimatedSection>
+      <AnimatedSection>
+        <Contact person={person} />
+      </AnimatedSection>
       <Footer person={person} />
     </>
   )

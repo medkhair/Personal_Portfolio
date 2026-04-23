@@ -1,5 +1,5 @@
 
-import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, Skill, Education, Career, ProjectCategory, Technology, Project } from "./models";
+import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, Skill, Education, Career, ProjectCategory, Technology, Project, Testimonial } from "./models";
 
 /*********** Branding *************/
 
@@ -407,6 +407,40 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
     ];
 
 
+/*********** Testimonials *************/
+
+    export const testimonials = [
+        new Testimonial(
+            "Youssef Amrani",
+            "CEO",
+            "Digital Speak",
+            null,
+            "Mohammed-Khair is an exceptional developer who consistently delivers high-quality work. His ability to understand complex requirements and translate them into elegant solutions is remarkable. A true asset to any team."
+        ),
+        new Testimonial(
+            "Sarah El Fassi",
+            "Project Manager",
+            "Oriental Group",
+            null,
+            "Working with Medkhair was a fantastic experience. He built our e-commerce platform with incredible attention to detail and delivered ahead of schedule. His code is clean, well-documented, and maintainable."
+        ),
+        new Testimonial(
+            "Ahmed Benjelloun",
+            "Founder",
+            "Broadkast Studio",
+            null,
+            "Medkhair transformed our vision into reality with the studio booking platform. His full-stack expertise and creative problem-solving made the entire process smooth. Highly recommended!"
+        ),
+        new Testimonial(
+            "Oumaima Mahdidi",
+            "UGC Creator",
+            "Freelance",
+            null,
+            "My portfolio website exceeded all expectations! Medkhair designed and developed a stunning, responsive site that perfectly represents my brand. The animations and attention to detail are incredible."
+        ),
+    ];
+
+
 /*********** Person *************/
 
     export const person = new Person(
@@ -452,7 +486,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         educationPath,
         careerPath,
         null,
-        null,
+        testimonials,
         null,
         null
     );
