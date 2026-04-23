@@ -33,27 +33,16 @@ function App() {
   return (
     <>
       <Hero person={person} />
-      <AnimatedSection>
-        <About person={person} />
-      </AnimatedSection>
-        <Services person={person} />
-      <AnimatedSection>
-        <Skills person={person} />
-      </AnimatedSection>
-
+      <About person={person} />
+      <Services person={person} />
+      <Skills person={person} />
       <ProjectsPart1 />
       <ProjectsPart2 projects={frontendApps} />
       <ProjectsPart3 projects={miniProjects} />
       <ProjectsPart4 projects={fullstackProjects} />
-      <AnimatedSection>
-        <Education person={person} />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Career person={person} />
-      </AnimatedSection>
-      <AnimatedSection>
-        <Contact person={person} />
-      </AnimatedSection>
+      <Education person={person} />
+      <Career person={person} />
+      <Contact person={person} />
       <Footer person={person} />
     </>
   )
