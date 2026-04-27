@@ -950,7 +950,7 @@
             display: flex;
             justify-content: center;
             flex-direction: column;
-            background-image: url("../src/images/part1.png");
+            background-image: url("../public/images/part1.webp");
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;

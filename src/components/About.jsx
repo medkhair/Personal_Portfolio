@@ -1,5 +1,5 @@
 import Inner from "./Inner";
-import aboutImage from '../images/aboutImage3.png';
+import aboutImage from '../../public/images/aboutImage3.webp';
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
