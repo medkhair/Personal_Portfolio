@@ -15,6 +15,7 @@ import ProjectsPart4 from './components/ProjectsPart4'
 import Navbar from './components/Navbar'
 import Testimonials from './components/Testimonials'
 import AnimatedSection from './components/AnimatedSection'
+import { useEffect } from 'react'
 
 /*
  * Copyright © 2025 Medkhair.
@@ -25,6 +26,18 @@ import AnimatedSection from './components/AnimatedSection'
 
 
 function App() {
+
+  useEffect(() => {
+    if (window.__preloaderComplete) {
+      window.__preloaderComplete();
+    } else {
+      const preloader = document.getElementById('preloader');
+      if (preloader) {
+        preloader.classList.add('hide');
+        setTimeout(() => preloader.remove(), 650);
+      }
+    }
+  }, []);
 
   const frontendApps = projects.filter(project => project.category === "Landing Pages & Frontend");
   const miniProjects = projects.filter(project => project.category === "Mini Projects");

@@ -2,15 +2,360 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Medkhair - portfolio</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+      /* ── Preloader shell ── */
+      #preloader {
+        position: fixed;
+        inset: 0;
+        z-index: 99999;
+        background: #050d1a;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        transition: opacity 0.8s ease, visibility 0.8s ease;
+      }
+      #preloader.hide { opacity: 0; visibility: hidden; }
+
+      /* ── Particle canvas ── */
+      #preloader-canvas {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      /* ── CRT scanline overlay ── */
+      .preloader-scanline {
+        position: absolute;
+        inset: 0;
+        background: repeating-linear-gradient(
+          0deg,
+          transparent,
+          transparent 2px,
+          rgba(0,0,0,0.07) 2px,
+          rgba(0,0,0,0.07) 4px
+        );
+        pointer-events: none;
+        z-index: 1;
+      }
+      .preloader-scanline::after {
+        content: '';
+        position: absolute;
+        left: 0; right: 0;
+        height: 35%;
+        background: linear-gradient(180deg, transparent, rgba(100,255,218,0.03), transparent);
+        animation: scanMove 4s linear infinite;
+      }
+      @keyframes scanMove {
+        0%   { top: -35%; }
+        100% { top: 100%; }
+      }
+
+      /* ── HUD corner brackets ── */
+      .preloader-corner {
+        position: absolute;
+        width: 28px;
+        height: 28px;
+        z-index: 3;
+      }
+      .preloader-corner::before,
+      .preloader-corner::after {
+        content: '';
+        position: absolute;
+        background: rgba(100,255,218,0.55);
+      }
+      .preloader-corner::before { top: 0; left: 0; width: 100%; height: 2px; }
+      .preloader-corner::after  { top: 0; left: 0; width: 2px; height: 100%; }
+      .preloader-corner--tl { top: 20px; left: 20px; }
+      .preloader-corner--tr { top: 20px; right: 20px; transform: scaleX(-1); }
+      .preloader-corner--bl { bottom: 20px; left: 20px; transform: scaleY(-1); }
+      .preloader-corner--br { bottom: 20px; right: 20px; transform: scale(-1); }
+
+      /* ── Centre content ── */
+      .preloader-content {
+        position: relative;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      /* ── Glitch title ── */
+      .preloader-glitch {
+        text-shadow: 0 0 40px rgba(100,255,218,0.7);
+        animation: glitchMain 4s infinite;
+        user-select: none;
+      }
+      .preloader-glitch img {
+        width: 200px;
+        height: auto;
+        border-radius: 50%;
+      }
+      .preloader-glitch::before,
+      .preloader-glitch::after {
+        content: attr(data-text);
+        position: absolute;
+        top: 0; left: 0;
+      }
+      .preloader-glitch::before {
+        color: #ff4d6d;
+        animation: glitchTop 4s infinite;
+        clip-path: polygon(0 0, 100% 0, 100% 38%, 0 38%);
+      }
+      .preloader-glitch::after {
+        color: #00cfff;
+        animation: glitchBot 4s infinite;
+        clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+      }
+      @keyframes glitchMain {
+        0%,88%,100% { transform: translate(0); }
+        89% { transform: translate(-3px, 1px); }
+        90% { transform: translate(3px,-1px); }
+        91% { transform: translate(0); }
+        95% { transform: translate(2px, 2px); }
+        96% { transform: translate(0); }
+      }
+      @keyframes glitchTop {
+        0%,88%,100% { transform: translate(0); opacity: 0; }
+        89% { transform: translate(-5px, 0); opacity: 0.85; }
+        90% { transform: translate(5px, 0); opacity: 0.85; }
+        91% { transform: translate(0); opacity: 0; }
+      }
+      @keyframes glitchBot {
+        0%,86%,100% { transform: translate(0); opacity: 0; }
+        87% { transform: translate(5px, 0); opacity: 0.85; }
+        88% { transform: translate(-5px, 0); opacity: 0.85; }
+        89% { transform: translate(0); opacity: 0; }
+      }
+
+      /* ── Tagline ── */
+      .preloader-tagline {
+        font-family: 'Courier New', monospace;
+        font-size: 10px;
+        letter-spacing: 10px;
+        color: rgba(100,255,218,0.35);
+        text-transform: uppercase;
+        margin-top: 4px;
+      }
+
+      /* ── Divider ── */
+      .preloader-divider {
+        width: 1px;
+        height: 36px;
+        background: linear-gradient(180deg, transparent, rgba(100,255,218,0.4), transparent);
+        margin: 8px 0;
+      }
+
+      /* ── Progress bar ── */
+      .preloader-bar-wrapper { width: 320px; }
+      .preloader-bar-track {
+        width: 100%;
+        height: 2px;
+        background: rgba(100,255,218,0.08);
+        position: relative;
+      }
+      .preloader-bar-fill {
+        height: 100%;
+        width: 0%;
+        background: #64FFDA;
+        transition: width 0.25s ease-out;
+        box-shadow: 0 0 14px rgba(100,255,218,1), 0 0 28px rgba(100,255,218,0.4);
+        position: relative;
+      }
+      /* Glowing tip at leading edge */
+      .preloader-bar-fill::after {
+        content: '';
+        position: absolute;
+        right: -1px;
+        top: -5px;
+        width: 3px;
+        height: 12px;
+        background: #fff;
+        border-radius: 2px;
+        box-shadow: 0 0 10px #64FFDA, 0 0 20px #64FFDA;
+      }
+      .preloader-bar-info {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 12px;
+      }
+      .preloader-status {
+        color: rgba(226,232,240,0.38);
+        font-size: 10px;
+        font-family: 'Courier New', monospace;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 0;
+      }
+      .preloader-percent {
+        color: #64FFDA;
+        font-size: 12px;
+        font-family: 'Courier New', monospace;
+        font-weight: 700;
+        margin: 0;
+        letter-spacing: 1px;
+        text-shadow: 0 0 10px rgba(100,255,218,0.8);
+      }
+    </style>
   </head>
   <body>
+    <div id="preloader">
+      <canvas id="preloader-canvas"></canvas>
+      <div class="preloader-scanline"></div>
+      <div class="preloader-corner preloader-corner--tl"></div>
+      <div class="preloader-corner preloader-corner--tr"></div>
+      <div class="preloader-corner preloader-corner--bl"></div>
+      <div class="preloader-corner preloader-corner--br"></div>
+
+      <div class="preloader-content">
+        <div class="preloader-glitch" data-text="M.">
+          <img src="/favicon.png" />
+        </div>
+        <div class="preloader-tagline">Portfolio</div>
+        <div class="preloader-divider"></div>
+        <div class="preloader-bar-wrapper">
+          <div class="preloader-bar-track">
+            <div class="preloader-bar-fill" id="preloader-bar"></div>
+          </div>
+          <div class="preloader-bar-info">
+            <p class="preloader-status" id="preloader-status">Initializing</p>
+            <p class="preloader-percent" id="preloader-percent">0%</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
     <div id="root"></div>
+
+    <script>
+      /* ── Particle network ── */
+      (function () {
+        var canvas = document.getElementById('preloader-canvas');
+        var ctx = canvas.getContext('2d');
+        var particles = [];
+        var raf;
+
+        function resize() {
+          canvas.width = window.innerWidth;
+          canvas.height = window.innerHeight;
+        }
+        resize();
+        window.addEventListener('resize', resize);
+
+        var COUNT = Math.min(70, Math.floor(window.innerWidth / 18));
+        for (var i = 0; i < COUNT; i++) {
+          particles.push({
+            x: Math.random() * window.innerWidth,
+            y: Math.random() * window.innerHeight,
+            vx: (Math.random() - 0.5) * 0.55,
+            vy: (Math.random() - 0.5) * 0.55,
+            r: Math.random() * 1.4 + 0.4
+          });
+        }
+
+        function draw() {
+          ctx.clearRect(0, 0, canvas.width, canvas.height);
+          for (var i = 0; i < particles.length; i++) {
+            var p = particles[i];
+            p.x += p.vx; p.y += p.vy;
+            if (p.x < 0 || p.x > canvas.width)  p.vx *= -1;
+            if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
+            ctx.beginPath();
+            ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+            ctx.fillStyle = 'rgba(100,255,218,0.55)';
+            ctx.fill();
+          }
+          for (var i = 0; i < particles.length; i++) {
+            for (var j = i + 1; j < particles.length; j++) {
+              var dx = particles[i].x - particles[j].x;
+              var dy = particles[i].y - particles[j].y;
+              var d = Math.sqrt(dx * dx + dy * dy);
+              if (d < 130) {
+                ctx.beginPath();
+                ctx.moveTo(particles[i].x, particles[i].y);
+                ctx.lineTo(particles[j].x, particles[j].y);
+                ctx.strokeStyle = 'rgba(100,255,218,' + ((1 - d / 130) * 0.13) + ')';
+                ctx.lineWidth = 0.6;
+                ctx.stroke();
+              }
+            }
+          }
+          raf = requestAnimationFrame(draw);
+        }
+        draw();
+
+        window.__stopPreloaderCanvas = function () {
+          cancelAnimationFrame(raf);
+          window.removeEventListener('resize', resize);
+        };
+      })();
+
+      /* ── Realistic progress simulation ── */
+      (function () {
+        var progress = 0;
+        var done = false;
+        var bar    = document.getElementById('preloader-bar');
+        var pct    = document.getElementById('preloader-percent');
+        var status = document.getElementById('preloader-status');
+        var timerId;
+
+        var phases = [
+          { at: 0,  label: 'Initializing' },
+          { at: 22, label: 'Loading Assets' },
+          { at: 48, label: 'Building UI' },
+          { at: 72, label: 'Rendering' },
+          { at: 90, label: 'Almost Ready' },
+        ];
+
+        function setProgress(val) {
+          progress = val;
+          bar.style.width = progress + '%';
+          pct.textContent = Math.round(progress) + '%';
+          for (var i = phases.length - 1; i >= 0; i--) {
+            if (progress >= phases[i].at) {
+              status.textContent = phases[i].label;
+              break;
+            }
+          }
+        }
+
+        function tick() {
+          if (done) return;
+          var remaining = 90 - progress;
+          var step = remaining * 0.06 + Math.random() * 1.5;
+          setProgress(Math.min(progress + step, 90));
+          var delay = 80 + (progress / 90) * 200 + Math.random() * 80;
+          timerId = setTimeout(tick, delay);
+        }
+        tick();
+
+        window.__preloaderComplete = function () {
+          done = true;
+          clearTimeout(timerId);
+          status.textContent = 'Ready';
+          bar.style.transition = 'width 0.4s ease';
+          setProgress(100);
+          setTimeout(function () {
+            if (window.__stopPreloaderCanvas) window.__stopPreloaderCanvas();
+            var el = document.getElementById('preloader');
+            if (el) {
+              el.classList.add('hide');
+              setTimeout(function () { el.remove(); }, 850);
+            }
+          }, 420);
+        };
+      })();
+    </script>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>
