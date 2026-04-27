@@ -1,7 +1,7 @@
 import Inner from "./Inner";
 import ParticleField from "./ParticleField";
 
-import heroImage from '../images/heroImage5.png';
+import heroImage from '../../public/images/heroImage5.webp';
 import { useState, useRef, useCallback } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
