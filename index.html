@@ -98,6 +98,14 @@
         width: 200px;
         height: auto;
         border-radius: 50%;
+        filter: drop-shadow(0 0 10px rgba(100,255,218,0.8));
+        animation: dropShadow 3s ease 
+          0.5s infinite;
+        margin-bottom: 30px;
+      }
+      @keyframes dropShadow {
+        0%,100% { filter: drop-shadow(0 0 10px rgba(100,255,218,0.4)); }
+        50% { filter: drop-shadow(0 0 20px rgba(100,255,218,.7)); }
       }
       .preloader-glitch::before,
       .preloader-glitch::after {
