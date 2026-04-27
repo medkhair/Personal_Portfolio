@@ -1,30 +1,27 @@
+import { useEffect, lazy, Suspense } from 'react'
 import './App.css'
-import Hero from './components/Hero'
 import { person, projects, testimonials } from './services/data'
-import About from './components/About'
-import Services from './components/Services'
-import Skills from './components/Skills'
-import Education from './components/Education'
-import Contact from './components/Contact'
-import Footer from './components/Footer'
-import Career from './components/Career'
-import ProjectsPart1 from './components/ProjectsPart1'
-import ProjectsPart2 from './components/ProjectsPart2'
-import ProjectsPart3 from './components/ProjectsPart3'
-import ProjectsPart4 from './components/ProjectsPart4'
+
+// Keep these eager (above the fold / needed immediately)
+import Hero from './components/Hero'
 import Navbar from './components/Navbar'
-import Testimonials from './components/Testimonials'
-import AnimatedSection from './components/AnimatedSection'
-import { useEffect, lazy } from 'react'
 
-/*
- * Copyright © 2025 Medkhair.
- * This software and its source code are owned by Medkhair.
- * Unauthorized copying, modification, distribution, or use
- * of this code, via any medium, is strictly prohibited.
- */
+// Lazy load everything else
+const About        = lazy(() => import('./components/About'))
+const Services     = lazy(() => import('./components/Services'))
+const Skills       = lazy(() => import('./components/Skills'))
+const ProjectsPart1 = lazy(() => import('./components/ProjectsPart1'))
+const ProjectsPart2 = lazy(() => import('./components/ProjectsPart2'))
+const ProjectsPart3 = lazy(() => import('./components/ProjectsPart3'))
+const ProjectsPart4 = lazy(() => import('./components/ProjectsPart4'))
+const Education    = lazy(() => import('./components/Education'))
+const Career       = lazy(() => import('./components/Career'))
+const Contact      = lazy(() => import('./components/Contact'))
+const Footer       = lazy(() => import('./components/Footer'))
+const Testimonials = lazy(() => import('./components/Testimonials'))
+const AnimatedSection = lazy(() => import('./components/AnimatedSection'))
 
-
+// Wrap the return in <Suspense fallback={null}>...</Suspense>
 function App() {
 
   useEffect(() => {
