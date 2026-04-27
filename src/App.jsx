@@ -15,7 +15,7 @@ import ProjectsPart4 from './components/ProjectsPart4'
 import Navbar from './components/Navbar'
 import Testimonials from './components/Testimonials'
 import AnimatedSection from './components/AnimatedSection'
-import { useEffect } from 'react'
+import { useEffect, lazy } from 'react'
 
 /*
  * Copyright © 2025 Medkhair.

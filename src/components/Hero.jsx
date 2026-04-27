@@ -1,10 +1,11 @@
 import Inner from "./Inner";
-import ParticleField from "./ParticleField";
 
 import heroImage from '../../public/images/heroImage5.webp';
 import { useState, useRef, useCallback } from "react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { lazy, Suspense } from 'react';
+const ParticleField = lazy(() => import('./ParticleField'));
 
 const techParticles = [
     { src: "/images/icons/React-icon.svg.png", alt: "React", x: 8, y: 12, size: 55, depth: 0.04, delay: 0 },
@@ -50,7 +51,9 @@ function Hero({person}){
                 ref={heroRef}
                 onMouseMove={handleMouseMove}
             >
-                <ParticleField />
+                <Suspense fallback={null}>
+                    <ParticleField />
+                </Suspense>
 
                 {/* Floating tech logo particles */}
                 <div className="hero-tech-particles">
