@@ -1,6 +1,6 @@
 import { useRef, useMemo } from 'react';
 import { Canvas, useFrame } from '@react-three/fiber';
-import * as THREE from 'three';
+import { Color, AdditiveBlending } from 'three';
 
 function Particles({ count = 800 }) {
   const mesh = useRef();
@@ -11,9 +11,9 @@ function Particles({ count = 800 }) {
     const colors = new Float32Array(count * 3);
     const sizes = new Float32Array(count);
 
-    const color1 = new THREE.Color('#64FFDA');
-    const color2 = new THREE.Color('#0A192F');
-    const color3 = new THREE.Color('#3ecfb0');
+    const color1 = new Color('#64FFDA');
+    const color2 = new Color('#0A192F');
+    const color3 = new Color('#3ecfb0');
 
     for (let i = 0; i < count; i++) {
       const i3 = i * 3;
@@ -70,7 +70,7 @@ function Particles({ count = 800 }) {
         transparent
         opacity={0.8}
         sizeAttenuation
-        blending={THREE.AdditiveBlending}
+        blending={AdditiveBlending}
         depthWrite={false}
       />
     </points>
