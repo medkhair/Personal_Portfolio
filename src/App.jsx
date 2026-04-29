@@ -24,9 +24,15 @@ function App() {
     const remaining = MIN_MS;
 
     const timer = setTimeout(() => {
+      if (window.__preloaderComplete) {
+        window.__preloaderComplete();
+      } else {
         const preloader = document.getElementById('preloader');
+        if (preloader) {
           preloader.classList.add('hide');
-          preloader.remove();
+          setTimeout(() => preloader.remove(), 650);
+        }
+      }
     }, remaining);
 
     return () => clearTimeout(timer);
