@@ -41,7 +41,8 @@ function App() {
   const fullstackProjects = projects.filter(project => project.category === "Full Stack Apps");
 
   return (
-    <>
+    <Suspense fallback={null}>
+      <Navbar />
       <Hero person={person} />
       <About person={person} />
       <Services person={person} />
@@ -54,7 +55,7 @@ function App() {
       <Career person={person} />
       <Contact person={person} />
       <Footer person={person} />
-    </>
+    </Suspense>
   )
 }
 

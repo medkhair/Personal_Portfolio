@@ -52,7 +52,9 @@ function Hero({person}){
                 onMouseMove={handleMouseMove}
             >
                 <Suspense fallback={null}>
-                    <ParticleField />
+                    {!isMobile && (
+                        <ParticleField />
+                    )}
                 </Suspense>
 
                 {/* Floating tech logo particles */}

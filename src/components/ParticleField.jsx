@@ -44,13 +44,7 @@ function Particles({ count = 800 }) {
     if (mesh.current) {
       mesh.current.rotation.y = time * 0.03;
       mesh.current.rotation.x = Math.sin(time * 0.02) * 0.1;
-
-      const positions = mesh.current.geometry.attributes.position.array;
-      for (let i = 0; i < count; i++) {
-        const i3 = i * 3;
-        positions[i3 + 1] += Math.sin(time + i * 0.1) * 0.002;
-      }
-      mesh.current.geometry.attributes.position.needsUpdate = true;
+      // Remove everything else
     }
   });
 
