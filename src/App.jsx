@@ -45,7 +45,7 @@ function App() {
 
   return (
     <>
-      <Hero person={person} />
+      <Suspense fallback={null}><Hero person={person} /></Suspense>
       <Suspense fallback={null}><About person={person} /></Suspense>
       <Suspense fallback={null}><Services person={person} /></Suspense>
       <Suspense fallback={null}><Skills person={person} /></Suspense>
