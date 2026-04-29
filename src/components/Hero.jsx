@@ -20,6 +20,8 @@ const techParticles = [
     { src: "/images/icons/spring-boot-1.svg", alt: "Spring Boot", x: 40, y: 85, size: 50, depth: 0.065, delay: 0.7 },
 ];
 
+const isMobile = window.innerWidth <= 768;
+
 function Hero({person}){
 
     const [text, count] = useTypewriter({
@@ -128,4 +130,3 @@ function Hero({person}){
 
 export default Hero;
 
-const isMobile = window.innerWidth <= 768;
