@@ -20,20 +20,13 @@ const Footer       = lazy(() => import('./components/Footer'))
 function App() {
 
   useEffect(() => {
-    const MIN_MS = 5000; // minimum 3.5 seconds
-    const elapsed = Date.now() - (window.__preloaderStart || Date.now());
+    const MIN_MS = 5000;
     const remaining = MIN_MS;
 
     const timer = setTimeout(() => {
-      if (window.__preloaderComplete) {
-        window.__preloaderComplete();
-      } else {
         const preloader = document.getElementById('preloader');
-        if (preloader) {
           preloader.classList.add('hide');
-          setTimeout(() => preloader.remove(), 650);
-        }
-      }
+          preloader.remove();
     }, remaining);
 
     return () => clearTimeout(timer);
