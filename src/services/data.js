@@ -78,7 +78,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             "DigitalSpeak_Logo.png",
             "DigitalSpeak_Bg.jpg",
             new Date(2024, 11, 10), 
-            null,
+            new Date(2026, 3, 30),
             [
                 "Building landing pages and sales funnels with custom CSS and JavaScript.",
                 "Integrating APIs to enhance functionality and user experience.",
