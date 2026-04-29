@@ -20,9 +20,9 @@ const Footer       = lazy(() => import('./components/Footer'))
 function App() {
 
   useEffect(() => {
-    const MIN_MS = 3500; // minimum 3.5 seconds
+    const MIN_MS = 5000; // minimum 3.5 seconds
     const elapsed = Date.now() - (window.__preloaderStart || Date.now());
-    const remaining = Math.max(0, MIN_MS - elapsed);
+    const remaining = MIN_MS;
 
     const timer = setTimeout(() => {
       if (window.__preloaderComplete) {
