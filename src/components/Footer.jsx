@@ -41,7 +41,7 @@ function Footer({ person }) {
                             <i className="bi bi-github"></i>
                         </a>
                         <a
-                            href="https://ma.linkedin.com/in/mohammed-khair-souiba-32a59632b"
+                            href="https://www.linkedin.com/in/mohammed-khair-souiba/"
                             target="_blank"
                             rel="noopener noreferrer"
                             aria-label="LinkedIn"
