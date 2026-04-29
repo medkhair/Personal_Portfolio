@@ -20,15 +20,23 @@ const Footer       = lazy(() => import('./components/Footer'))
 function App() {
 
   useEffect(() => {
-    if (window.__preloaderComplete) {
-      window.__preloaderComplete();
-    } else {
-      const preloader = document.getElementById('preloader');
-      if (preloader) {
-        preloader.classList.add('hide');
-        setTimeout(() => preloader.remove(), 650);
+    const MIN_MS = 3500; // minimum 3.5 seconds
+    const elapsed = Date.now() - (window.__preloaderStart || Date.now());
+    const remaining = Math.max(0, MIN_MS - elapsed);
+
+    const timer = setTimeout(() => {
+      if (window.__preloaderComplete) {
+        window.__preloaderComplete();
+      } else {
+        const preloader = document.getElementById('preloader');
+        if (preloader) {
+          preloader.classList.add('hide');
+          setTimeout(() => preloader.remove(), 650);
+        }
       }
-    }
+    }, remaining);
+
+    return () => clearTimeout(timer);
   }, []);
 
   const frontendApps = projects.filter(p => p.category === "Landing Pages & Frontend");
