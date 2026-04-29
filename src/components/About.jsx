@@ -1,11 +1,12 @@
 import Inner from "./Inner";
-import aboutImage from '../../public/images/aboutImage3.webp';
 import { useEffect, useRef, useState } from "react";
 import { motion, useInView } from "framer-motion";
 
 function useCountUp(end, duration = 2000, inView) {
     const [count, setCount] = useState(0);
     const hasAnimated = useRef(false);
+
+    
 
     useEffect(() => {
         if (!inView || hasAnimated.current) return;
@@ -36,6 +37,8 @@ function About({person}) {
     const yearsCount = useCountUp(person.about.numberOfYearsExperience, 2000, isInView);
     const projectsCount = useCountUp(person.about.numberOfCompletedProjects, 2500, isInView);
     const clientsCount = useCountUp(person.about.numberOfHappyClients, 1800, isInView);
+
+    const aboutImage = '/images/aboutImage3.webp';
 
     return (
         <>
