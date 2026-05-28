@@ -12,6 +12,7 @@ const ProjectsPart3 = lazy(() => import('./components/ProjectsPart3'));
 const ProjectsPart4 = lazy(() => import('./components/ProjectsPart4'));
 const Education = lazy(() => import('./components/Education'));
 const Career = lazy(() => import('./components/Career'));
+const ValueSection = lazy(() => import('./components/ValueSection'));
 const Contact = lazy(() => import('./components/Contact'));
 const Footer = lazy(() => import('./components/Footer'));
 
@@ -55,13 +56,13 @@ function App() {
         <Hero person={person} />
         <About person={person} />
         <Services person={person} />
-        <Skills person={person} />
 
         <ProjectsPart1 />
         <ProjectsPart2 projects={frontendApps} />
         <ProjectsPart3 projects={miniProjects} />
         <ProjectsPart4 projects={fullstackProjects} />
-
+        <ValueSection />
+        <Skills person={person} />
         <Education person={person} />
         <Career person={person} />
         <Contact person={person} />

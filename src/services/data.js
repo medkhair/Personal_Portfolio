@@ -74,32 +74,33 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
     const careerPath = [
         new Career(
             "Digital Speak", 
-            "Full-stack web developer",
+            "Full-Stack Web Developer",
             "DigitalSpeak_Logo.png",
             "DigitalSpeak_Bg.jpg",
             new Date(2024, 11, 10), 
             new Date(2026, 3, 30),
             [
-                "Building landing pages and sales funnels with custom CSS and JavaScript.",
-                "Integrating APIs to enhance functionality and user experience.",
-                "Creating full-stack web applications.",
-                "Developing custom automation solutions using code to streamline business workflows.",
-                "Leading a team in the development of full-stack applications",
-                "Participated in code reviews and contributed to team meetings."
+                "Built scalable web applications, landing pages, and digital platforms for businesses.",
+                "Developed sales funnels focused on improving customer engagement and conversions.",
+                "Integrated APIs and third-party services to enhance platform capabilities.",
+                "Created custom automation solutions to streamline business workflows and reduce manual operations.",
+                "Collaborated on full-stack application architecture and development.",
+                "Participated in code reviews, technical planning, and team collaboration."
             ],
             1
         ),
         new Career(
             "Oriental Group", 
-            "Intern web Developer", 
+            "Web Developer Intern", 
             "Oriental_logo.png", 
             "Marrakech-Morocco-Medina.jpg", 
             new Date(2024,8, 1), 
             new Date(2024, 9, 19), 
             [
-                "Create and maintain WordPress websites for selling argan oil.",
-                "Create a web application in PHP (Arganisme) to manage clients and orders.",
-                "Participated in code reviews and contributed to team meetings."
+                "Developed and maintained WordPress websites for product-based businesses.",
+                "Built a custom PHP web application to manage clients, products, and orders.",
+                "Contributed to improving internal workflows and management processes.",
+                "Participated in team collaboration and project development discussions."
             ],
             3
         ),
@@ -182,7 +183,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             ],
             categories[0].name
         ),
-
+/*
         new Project(
             "Weather App",
             "Provide users with quick, reliable access to current weather forecasts for any city.",
@@ -230,7 +231,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             ],
             categories[0].name
         ),
-
+*/
         /* ===== Full Stack Apps ===== */
 
         new Project(
@@ -446,39 +447,44 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
     export const person = new Person(
         "Mohammed-khair",
         "Souiba",
-        "1995-08-15",
-        "Full Stack Web Developer",
+        "2001-10-21",
+        "Full-Stack Developer | Automation & AI Solutions",
         null,
         null,
-        "I create beautiful, responsive, and user-friendly web applications using cutting-edge technologies. Passionate about turning ideas into reality through clean and efficient code.",
+        "I help businesses grow through custom web applications, high-converting landing pages, workflow automations, and AI-powered solutions. From scalable SaaS platforms to modern digital experiences, I build systems designed to improve operations, customer experience, and business efficiency.",
         ['../images/heroImage5.png'],
         new About(
             "About Me",
-            "I am a passionate Full Stack Web Developer with a knack for creating dynamic and responsive web applications. With a strong foundation in both front-end and back-end technologies, I thrive on turning complex problems into elegant solutions. My journey in web development has equipped me with the skills to build seamless user experiences while ensuring robust functionality. I am constantly exploring new technologies and best practices to stay ahead in this ever-evolving field. Let's connect and bring your ideas to life through innovative web solutions.",
-            3,
+            "I am a passionate Full Stack Web Developer with a knack for creating dynamic and responsive web applications.",
+            20,
             20,
             4
         ),
         [
             new Service(
-                "Full Stack Web Apps",
-                "Building complete web applications from front-end to back-end using modern frameworks and technologies.",
+                "Full-Stack Web Applications",
+                "Custom web platforms, dashboards, portals, and SaaS applications designed for scalability, performance, and long-term growth.",
                 "layers.png"
             ),
             new Service(
                 "Landing Pages",
-                "Designing and developing high-converting landing pages tailored to your business needs.",
+                "Modern, responsive, and conversion-focused landing pages built to strengthen your online presence and generate leads.",
                 "dashboard.png"
             ),
             new Service(
-                "Sale Funnels",
-                "Creating effective sales funnels to guide your customers through the buying process.",
+                "Sales Funnels",
+                "Strategic sales funnels designed to guide visitors through the customer journey and maximize conversions.",
                 "funnel.png"
             ),
             new Service(
                 "Custom Automations",
-                "Streamline your business workflows with custom-coded automation solutions that save time and reduce errors.",
+                "Automate repetitive business tasks and streamline operations with tailored workflow automation solutions.",
                 "automation.png"
+            ),
+            new Service(
+                "AI Solutions",
+                "AI-powered assistants, chatbots, intelligent workflows, and automation systems built to improve efficiency and customer engagement.",
+                "ai.png"
             )
         ],
         skills,

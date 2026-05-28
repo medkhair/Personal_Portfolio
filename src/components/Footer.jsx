@@ -8,7 +8,7 @@ function Footer({ person }) {
                     <h3 className="footer-logo">
                         {person.firstName} {person.lastName}
                     </h3>
-                    <p className="footer-tagline">{person.title}</p>
+                    <p className="footer-tagline">Web Apps • Automation • AI Solutions</p>
                 </div>
 
                 <div className="footer-section">
@@ -66,13 +66,10 @@ function Footer({ person }) {
             <div className="footer-bottom">
                 <Inner className="footer-bottom-content">
                     <p>
-                        © 2025 {person.firstName} {person.lastName}. All rights
-                        reserved.
+                        © 2026 {person.firstName} {person.lastName}. All rights reserved.
                     </p>
                     <p>
-                        Crafted with{" "}
-                        <i className="bi bi-heart-fill"></i> and{" "}
-                        <i className="bi bi-cup-hot-fill"></i>
+                        Crafted with passion, creativity, and clean code.
                     </p>
                 </Inner>
             </div>

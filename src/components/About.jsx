@@ -34,7 +34,7 @@ function About({person}) {
     const statsRef = useRef(null);
     const isInView = useInView(statsRef, { once: true, amount: 0.5 });
 
-    const yearsCount = useCountUp(person.about.numberOfYearsExperience, 2000, isInView);
+    const yearsCount = useCountUp(3, 2000, isInView);
     const projectsCount = useCountUp(person.about.numberOfCompletedProjects, 2500, isInView);
     const clientsCount = useCountUp(person.about.numberOfHappyClients, 1800, isInView);
 
@@ -57,9 +57,13 @@ function About({person}) {
                         <img src={aboutImage} alt="About Me Image" />
                     </div>
                     <div>
-                        <p>Hello! I'm Mohammed-Khair, a passionate full-stack web developer based in Morocco. I enjoy creating things that live on the internet, whether that be websites, applications, or anything in between. <br /><br />
+                        <p>I'm a full-stack developer based in Morocco, specializing in scalable digital solutions built with modern technologies like React.js and Spring Boot.<br /><br />
 
-My interest in web development started back in 2023 when I decided to explore the world of programming. Fast forward to today, and I've had the privilege of working on various projects ranging from e-commerce platforms to educational management systems.
+My work goes beyond building websites, i create systems that help businesses streamline operations, improve customer experiences, automate repetitive tasks, and scale efficiently.<br /><br />
+
+From full-stack platforms and admin dashboards to landing pages, automations, and AI-powered tools, I focus on creating fast, reliable, and user-centered solutions that deliver real business value.<br /><br />
+
+I enjoy transforming ideas into scalable digital products with clean architecture, modern design, and long-term maintainability in mind.
                         </p>
                         <div className="about-stats" ref={statsRef}>
                             <motion.div

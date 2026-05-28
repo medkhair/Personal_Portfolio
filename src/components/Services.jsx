@@ -11,7 +11,7 @@ function Services({person}){
                         <h2 className="section-title">Services</h2>
                         <hr />
                         <p>
-                            I offer a range of services to help you achieve your web development goals, including:
+                            I help businesses build modern digital systems that improve operations, automate workflows, and create better customer experiences.
                         </p>
                     </div>
                 </Inner>

@@ -8,10 +8,10 @@ function Education({ person }) {
       <section className="education" id="education">
         <Inner className="section-header">
           <div>
-            <h2 className="section-title">My Learning Journey</h2>
+            <h2 className="section-title">Education &amp; Learning</h2>
             <hr />
             <p>
-                Here is a summary of my educational background and qualifications:
+                My educational background and continuous learning journey in software development, modern web technologies, and scalable systems.
             </p>
           </div>
         </Inner>

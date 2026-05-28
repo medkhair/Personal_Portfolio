@@ -18,7 +18,7 @@ function Skills({ person }) {
           <div>
             <h2 className="section-title">Skills</h2>
             <hr />
-            <p>Here are some of my technical skills and proficiencies:</p>
+            <p>A combination of frontend, backend, automation, and AI technologies used to build scalable modern digital solutions.</p>
           </div>
         </Inner>
         <Inner className="skills-container">

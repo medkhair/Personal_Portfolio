@@ -34,7 +34,7 @@ function ProjectsPart3({projects}) {
 
                 <Inner className="section-header">
                     <div>
-                        <h2 className="section-title">Mini Projects</h2>
+                        <h2 className="section-title">CLI Applications</h2>
                         <hr />
                     </div>
                 </Inner>

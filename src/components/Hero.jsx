@@ -26,7 +26,7 @@ function Hero({person}){
 
     const [text, count] = useTypewriter({
         words: [
-            "Hi, i'm " + person.lastName + " " + person.firstName,
+            "Hi, I'm " + person.firstName + " " + person.lastName,
         ],
         loop: true,
         delaySpeed: 5000,
@@ -102,7 +102,7 @@ function Hero({person}){
                         <p>{person.description}</p>
                         <div className="buttons">
                             <a href="#projects-part-1" className="button primary">View My work</a>
-                            <a href="https://cvdesignr.com/p/66f6b596aa2bd" target="_blank" className="button secondary">Download CV</a>
+                            <a href="#contact" className="button secondary">Let’s Work Together</a>
                         </div>
                         <div className="buttons social-icons">
                             <a href="https://github.com/medkhair" target="_blank" className="button primary"><i className="bi bi-github" ></i></a>

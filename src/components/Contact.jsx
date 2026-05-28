@@ -61,10 +61,10 @@ function Contact({person}) {
             <section id="contact" className="contact">
                 <Inner className="section-header">
                     <div>
-                        <h2 className="section-title">Get In Touch</h2>
+                        <h2 className="section-title">Let's Build Something Valuable</h2>
                         <hr />
                         <p>
-                            Feel free to reach out for collaborations or just a friendly hello!
+                            Whether you need a scalable web platform, a high-converting landing page, workflow automation, or AI-powered solutions, I'm always open to discussing new ideas and collaborations.
                         </p>
                     </div>
                 </Inner>

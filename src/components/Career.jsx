@@ -17,7 +17,7 @@ function Career({person}) {
             <section id="career" className="career-section" style={{backgroundImage: `url(/images/${selectedCompany.background})`}}>
                 <Inner className="section-header">
                     <div>
-                        <h2 className="section-title">Career Highlights</h2>
+                        <h2 className="section-title">Professional Experience</h2>
                         <hr />
                     </div>
                 </Inner>
