@@ -1,7 +1,4 @@
 import Inner from "./Inner";
-import { motion } from "framer-motion";
-import { useInView } from "framer-motion";
-import { useRef } from "react";
 
 const values = [
     "Build scalable digital platforms",
@@ -14,10 +11,9 @@ const values = [
     "Transform ideas into scalable products",
 ];
 
-function ValueSection() {
-    const ref = useRef(null);
-    const isInView = useInView(ref, { once: true, amount: 0.2 });
+const COUNT = values.length;
 
+function ValueSection() {
     return (
         <section id="value" className="value-section">
             <Inner className="section-header">
@@ -26,20 +22,42 @@ function ValueSection() {
                     <hr />
                 </div>
             </Inner>
-            <Inner className="value-list" ref={ref}>
+
+            {/* Desktop — infinite circular orbit */}
+            <div className="value-orbit-container">
+                <div className="value-orbit-ring">
+                    {values.map((item, index) => {
+                        const angle = (index / COUNT) * 360;
+                        return (
+                            <div
+                                key={index}
+                                className="value-orbit-item"
+                                style={{ '--item-angle': `${angle}deg` }}
+                            >
+                                <div className="value-orbit-item-inner">
+                                    <span className="value-check">✓</span>
+                                    <span className="value-text">{item}</span>
+                                </div>
+                            </div>
+                        );
+                    })}
+                </div>
+
+                {/* Static center hub */}
+                <div className="value-orbit-center">
+                    <span className="value-orbit-center-label">How I<br />Help</span>
+                </div>
+            </div>
+
+            {/* Mobile — simple stacked list */}
+            <div className="value-list-mobile">
                 {values.map((item, index) => (
-                    <motion.div
-                        key={index}
-                        className="value-item"
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={isInView ? { opacity: 1, y: 0 } : {}}
-                        transition={{ duration: 0.4, delay: index * 0.08 }}
-                    >
+                    <div key={index} className="value-item">
                         <span className="value-check">✓</span>
                         <span>{item}</span>
-                    </motion.div>
+                    </div>
                 ))}
-            </Inner>
+            </div>
         </section>
     );
 }

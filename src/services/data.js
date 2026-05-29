@@ -84,7 +84,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
                 "Developed sales funnels focused on improving customer engagement and conversions.",
                 "Integrated APIs and third-party services to enhance platform capabilities.",
                 "Created custom automation solutions to streamline business workflows and reduce manual operations.",
-                "Collaborated on full-stack application architecture and development.",
+                "Managed and guided teams during the development of full-stack platforms.",
                 "Participated in code reviews, technical planning, and team collaboration."
             ],
             1
