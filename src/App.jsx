@@ -1,6 +1,7 @@
 import { useEffect, lazy, Suspense, useMemo } from 'react';
 import './App.css';
 import { person, projects } from './services/data';
+import { Analytics } from "@vercel/analytics/react";
 
 const Hero = lazy(() => import('./components/Hero'));
 const About = lazy(() => import('./components/About'));
