@@ -156,7 +156,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "Coffee Landing Page",
-            "Create an attractive online presence for a coffee brand to engage customers and showcase products.",
+            "An attractive online presence for a coffee brand to engage customers and showcase products.",
             "coffeLanding.png",
             "https://medkhair.github.io/Coffee_LandingPage/",
             "https://github.com/medkhair/Coffee_LandingPage",
@@ -170,7 +170,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "Recipe App",
-            "To build a modern frontend application that consumes and displays data from a third-party API.",
+            "A modern frontend application that consumes and displays data from a third-party API.",
             "recipe_App.png",
             "https://recipe-app-react-js-six.vercel.app/",
             "https://github.com/medkhair/Recipe_App_React_JS",
@@ -236,7 +236,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "Broadkast",
-            "a studio booking platform that streamlines the process of scheduling and managing studio sessions for artists and producers.",
+            "A studio booking platform that streamlines the process of scheduling and managing studio sessions for artists and producers.",
             "broadkast.png",
             "https://book.broadkast.studio/",
             "",
@@ -256,7 +256,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         ),
         new Project(
             "E-Sagim",
-            "Build a secure, scalable system to handle complex relationships between students, courses, and faculty.",
+            "A secure, scalable system to handle complex relationships between students, courses, and faculty.",
             "E-Sagim.png",
             "https://e-sagim-front-l5ur.vercel.app",
             "https://github.com/medkhair/E-SAGIM-Front",
@@ -295,7 +295,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "My Taste",
-            "Help food enthusiasts discover traditional dishes from every country and explore global culinary cultures.",
+            "Helping food enthusiasts discover traditional dishes from every country and explore global culinary cultures.",
             "MyTaste.jpg",
             "https://medkhair.42web.io/my-taste/",
             "https://github.com/medkhair/My_taste_V1-Dynamic-Site-",
@@ -313,7 +313,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "Kids Club Manager",
-            "Create an all-in-one solution for managing kids' extracurriculars, payments, and communications.",
+            "An all-in-one solution for managing kids' extracurriculars, payments, and communications.",
             "kids.jpg",
             "",
             "https://github.com/medkhair/kidsClubmanager-MobileApp",
@@ -368,7 +368,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "Breakfast delivery App",
-            "Build a scalable backend using Java Servlets to power a food delivery platform's core operations.",
+            "A scalable backend using Java Servlets to power a food delivery platform's core operations.",
             "dilevry.png",
             "",
             "https://github.com/medkhair/Livraison-de-petits-d-jeuners",
@@ -382,7 +382,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "Flight Reservation System Manager",
-            "Demonstrate object-oriented programming principles by building a complex reservation system with multiple interacting entities.",
+            "Demonstrating object-oriented programming principles by building a complex reservation system with multiple interacting entities.",
             "Flight.jpg",
             "",
             "https://github.com/medkhair/Flight_reservation_system_manager_-V1-",
@@ -395,7 +395,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 
         new Project(
             "Contact Manager Java",
-            "Create an efficient terminal-based system to manage personal and professional contacts with full CRUD operations.",
+            "Creating an efficient terminal-based system to manage personal and professional contacts with full CRUD operations.",
             "contact-management.png",
             "",
             "https://github.com/medkhair/Contact_manager_java",
