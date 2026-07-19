@@ -20,6 +20,11 @@ function Services({person}){
                         <ServiceItem key={index} service={service} />
                     ))}
                 </Inner>
+                <Inner className="services-section-footer">
+                    <a className="button secondary" href="#projects-part-1">
+                        View my work
+                    </a>
+                </Inner>
             </section>
         
         </>
