@@ -77,62 +77,6 @@ function Particles({ count = 800 }) {
   );
 }
 
-function FloatingGeometry() {
-  const torusRef = useRef();
-  const icosaRef = useRef();
-  const octaRef = useRef();
-
-  useFrame((state) => {
-    const time = state.clock.getElapsedTime();
-    if (torusRef.current) {
-      torusRef.current.rotation.x = time * 0.2;
-      torusRef.current.rotation.y = time * 0.3;
-      torusRef.current.position.y = Math.sin(time * 0.5) * 0.5;
-    }
-    if (icosaRef.current) {
-      icosaRef.current.rotation.x = time * 0.15;
-      icosaRef.current.rotation.z = time * 0.25;
-      icosaRef.current.position.y = Math.cos(time * 0.4) * 0.3 + 1;
-    }
-    if (octaRef.current) {
-      octaRef.current.rotation.y = time * 0.2;
-      octaRef.current.rotation.z = time * 0.1;
-      octaRef.current.position.y = Math.sin(time * 0.6) * 0.4 - 1;
-    }
-  });
-
-  return (
-    <>
-      <mesh ref={torusRef} position={[3, 0, -2]}>
-        <torusGeometry args={[0.8, 0.2, 16, 32]} />
-        <meshStandardMaterial
-          color="#64FFDA"
-          wireframe
-          transparent
-          opacity={0.15}
-        />
-      </mesh>
-      <mesh ref={icosaRef} position={[-3.5, 1, -3]}>
-        <icosahedronGeometry args={[0.7, 0]} />
-        <meshStandardMaterial
-          color="#64FFDA"
-          wireframe
-          transparent
-          opacity={0.12}
-        />
-      </mesh>
-      <mesh ref={octaRef} position={[2, -2, -1]}>
-        <octahedronGeometry args={[0.5, 0]} />
-        <meshStandardMaterial
-          color="#3ecfb0"
-          wireframe
-          transparent
-          opacity={0.1}
-        />
-      </mesh>
-    </>
-  );
-}
 
 function ParticleField() {
   return (
@@ -145,7 +89,6 @@ function ParticleField() {
         <ambientLight intensity={0.5} />
         <pointLight position={[10, 10, 10]} intensity={0.8} color="#64FFDA" />
         <Particles />
-        <FloatingGeometry />
       </Canvas>
     </div>
   );
