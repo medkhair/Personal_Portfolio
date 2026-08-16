@@ -42,7 +42,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
         new Skill("Spring Data JPA", 70, "jpa.png", skillCategories[2]),
         new Skill("Maven", 85, "maven.png", skillCategories[4]),
         new Skill("RESTful APIs", 80, "api.png", skillCategories[1]),
-        new Skill("Spring Security", 65, "security.png", skillCategories[2]),
+        new Skill("Spring Security", 65, "security.png", skillCategories[1]),
         new Skill("Hibernate", 70, "hibernate.png", skillCategories[2]),
         new Skill("JQuery", 90, "jquery.png", skillCategories[1]),
         new Skill("WordPress", 75, "wordpress.png", skillCategories[3]),
@@ -234,6 +234,26 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
 */
         /* ===== Full Stack Apps ===== */
 
+        new Project(
+            "AstraFlow",
+            "An IPTV streaming platform that I built to manage and deliver TV channels through subscription plans.",
+            "astraflow.png",
+            "https://astraflow-tv.vercel.app/optin",
+            "",
+            "",
+            [
+                technologies[0].name,
+                technologies[1].name,
+                technologies[2].name,
+                technologies[3].name,
+                technologies[5].name,
+                technologies[6].name,
+                technologies[7].name,
+                technologies[8].name,
+                technologies[14].name
+            ],
+            categories[1].name
+        ),
         new Project(
             "Broadkast",
             "A studio booking platform that streamlines the process of scheduling and managing studio sessions for artists and producers.",
