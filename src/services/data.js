@@ -239,7 +239,7 @@ import { Person, Font, Colors, Fonts, Branding, About, Service, SkillCategory, S
             "An IPTV streaming platform that I built to manage and deliver TV channels through subscription plans.",
             "astraflow.png",
             "https://astraflow-tv.vercel.app/optin",
-            "",
+            "https://github.com/medkhair/AstraFlow",
             "",
             [
                 technologies[0].name,
